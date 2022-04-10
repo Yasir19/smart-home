@@ -22,7 +22,17 @@ const resolvers = {
             return contractor;
 
         }, 
-        login: async () => {
+        login: async (parent, { email, password}) => {
+            const contractor = await Contractor.findOne({email});
+            if(!contractor){
+                throw new AuthenticationError('Incorrect credentials');
+            }
+            const correctPassword = await contractor.isCorrectPassword(password);
+
+            if(!correctPassword){
+                throw new AuthenticationError('Incorrect credentials');
+            }
+            return contractor
 
         }
     }
