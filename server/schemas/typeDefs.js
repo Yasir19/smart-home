@@ -14,16 +14,13 @@ type Contractor {
 }
 type Query {
 contractors:[Contractor]
+contractor(name:String!): Contractor
+}
+
+type Mutation {
+    login (email:String!, password: String!): Contractor
+    addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:Int!, bio:String,photo:String,phoneNumber:String!): Contractor
 }
 `;
 // export the typeDefs
 module.exports = typeDefs;
-
-
-
-// type Mutation {
-// addContractor(firstName:String!, lastName:String!,email:String!, password:String!,typeOfServices:String!,cert:String, bio:String,photo:String,phoneNumber:Number)
-// }
-// type Auth {
-//     token: ID!
-//     user:Contractor

@@ -4,24 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "watch": "nodemon",
+    "watch": "nodemon server.js",
     "seed": "node seeders/seeds.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yasir19/smart-home.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Yasir19/smart-home/issues"
-  },
-  "homepage": "https://github.com/Yasir19/smart-home#readme",
   "dependencies": {
-    "apollo-server-express": "^3.6.7",
+    "apollo-server-express": "^3.6.6",
     "bcrypt": "^5.0.1",
     "express": "^4.17.3",
     "faker": "^4.1.0",
