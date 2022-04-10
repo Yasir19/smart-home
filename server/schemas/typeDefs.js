@@ -1,22 +1,29 @@
 // import the gql template function
-const {gql} = require('apollo-server-express');
-const typeDEFS = gql`
+const { gql } = require("apollo-server-express");
+const typeDefs = gql`
 type Contractor {
     _id:ID
-    firstName:String
-    lastName:String
+    name:String
     email:String
     typeOfServices:String
+    serviceZipcode:Int
     cert:String
     bio:String
     photo:String
-    phoneNumber:Number
+    phoneNumber:String
 }
-type Mutation {
-addContractor(firstName:String!, lastName:String!,email:String!, password:String!,typeOfServices:String!,cert:String, bio:String,photo:String,phoneNumber:Number)
+type Query {
+contractors:[Contractor]
 }
-type Auth {
-    token: ID!
-    user:Contractor
-}
-`
+`;
+// export the typeDefs
+module.exports = typeDefs;
+
+
+
+// type Mutation {
+// addContractor(firstName:String!, lastName:String!,email:String!, password:String!,typeOfServices:String!,cert:String, bio:String,photo:String,phoneNumber:Number)
+// }
+// type Auth {
+//     token: ID!
+//     user:Contractor

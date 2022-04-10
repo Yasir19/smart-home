@@ -3,12 +3,7 @@ const bcrypt = require('bcrypt')
 
 const contractorSchema = new Schema(
     {
-        firstName:{
-            type:String,
-            required:true,
-            trim:true
-        },
-        lastName:{
+        name:{
             type:String,
             required:true,
             trim:true
@@ -22,7 +17,7 @@ const contractorSchema = new Schema(
         password: {
             type: String,
             required: true,
-            minlength:10
+            minlength:9
         },
         address: {
             type:String,
@@ -55,7 +50,7 @@ const contractorSchema = new Schema(
             required:false,
         },
         phoneNumber: {
-            type:Number,
+            type:String,
             required:true,
             match:[ /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'must match a phone number']
         }

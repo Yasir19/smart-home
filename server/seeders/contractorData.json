@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Alberto Harrison",
+        "email":"alberto.h@gmail.com",
+        "password":"123456789",
+        "address":"1993 Lakeland Terrace Southfield, MI 48034",
+        "driverLicense":"driv1.jpg",
+        "typeOfServices":"home theater",
+        "serviceZipcode": 48034,
+        "phoneNumber": "903-222-4444"
+    },
+    {
+        "name":"Sean L. Jackson",
+        "email":"SeanLJackson@gmail.com",
+        "password":"123456789",
+        "address":"2485 Victoria Street Baton Rouge, LA 70801",
+        "driverLicense":"driv2.jpg",
+        "typeOfServices":"WiFi Optimizer",
+        "serviceZipcode": 70801,
+        "phoneNumber": "903-222-3333"
+    },
+    {
+        "name":"Troy M. Rucker",
+        "email":"troy.m@gmail.com",
+        "password":"123456789",
+        "address":"2060 Rosewood Court Worthington, MN 56187",
+        "driverLicense":"driv3.jpg",
+        "typeOfServices":"smart light installation",
+        "serviceZipcode": 56187,
+        "phoneNumber": "903-222-6666"
+    },
+    {
+        "name":"Wanda C. Bogue",
+        "email":"andaCBogue@gmail.com",
+        "password":"123456789",
+        "address":"2947 Hickory Ridge Drive Las Vegas, NV 89119",
+        "driverLicense":"driv4.jpg",
+        "typeOfServices":"WiFi Optimizer",
+        "serviceZipcode": 89119,
+        "phoneNumber": "903-222-4444"
+    }
+]
