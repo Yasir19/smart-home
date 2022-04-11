@@ -1,9 +1,18 @@
 const {Contractor} = require('../models');
 const {AuthenticationError} = require('apollo-server-express');
-// const {signToken } = require('../utils/auth');
+const { signToken } = require('../utils/auth');
 const resolvers = {
     // query section 
     Query: {
+        loggedContractor: async (parent, arags, context) => {
+            if(context.contractor) {
+                const contractorData = await Contractor.findOne({_id: context.contractor._id})
+                .select('-__v -password')
+
+                return contractorData
+            }
+            throw new AuthenticationError('Not logged in');
+        },
         // get all contractors 
         contractors: async () => {
             return Contractor.find()
@@ -18,8 +27,8 @@ const resolvers = {
     Mutation: {
         addContractor: async (parent, args) => {
             const contractor = await Contractor.create(args)
-
-            return contractor;
+            const token = signToken(contractor)
+            return {token, contractor};
 
         }, 
         login: async (parent, { email, password}) => {
@@ -32,7 +41,8 @@ const resolvers = {
             if(!correctPassword){
                 throw new AuthenticationError('Incorrect credentials');
             }
-            return contractor
+            const token = signToken(contractor)
+            return {token, contractor}
 
         }
     }

@@ -13,13 +13,19 @@ type Contractor {
     phoneNumber:String
 }
 type Query {
+loggedContractor : Contractor
 contractors:[Contractor]
 contractor(name:String!): Contractor
 }
 
 type Mutation {
-    login (email:String!, password: String!): Contractor
-    addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:Int!, bio:String,photo:String,phoneNumber:String!): Contractor
+    login (email:String!, password: String!): Auth
+    addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:Int!, bio:String,photo:String,phoneNumber:String!): Auth
+}
+type Auth {
+    token: ID!
+    contractor: Contractor
+    
 }
 `;
 // export the typeDefs
