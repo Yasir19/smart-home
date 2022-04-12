@@ -20,7 +20,7 @@ export const ADD_CONTRACTOR = gql`
     $address: String!
     $driverLicense: String!
     $cert: String
-    $serviceZipcode: Int!
+    $serviceZipcode: String!
     $bio: String
     $photo: String
     $phoneNumber: String!

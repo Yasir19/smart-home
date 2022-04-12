@@ -37,7 +37,7 @@ const contractorSchema = new Schema(
             required:false,
         },
         serviceZipcode: {
-            type:Number,
+            type:String,
             required:true,
         },
         bio: {
