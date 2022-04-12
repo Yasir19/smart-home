@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/Header";
+import Nav from "./components/Nav";
 import {
   ApolloProvider,
   ApolloClient,
@@ -23,7 +23,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
+        <Nav/>
         <div className="container"></div>
         <Route exact path='/login' component={Clogin}/>
         <Route exact path='/signup' component={Csignup}/>
