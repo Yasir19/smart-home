@@ -18,9 +18,9 @@ const resolvers = {
             return Contractor.find()
             .select('-__v -password')
         },
-        // get contractor by name 
-        contractor: async(parent, {name}) => {
-            return Contractor.findOne({name})
+        // get contractor by username 
+        contractor: async(parent, {username}) => {
+            return Contractor.findOne({username})
             .select('-__v -password')
         }
     },

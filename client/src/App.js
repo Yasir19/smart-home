@@ -7,14 +7,14 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Clogin from './pages/Clogin';
-import Csignup from "./pages/Csignup";
+import Clogin from './components/Clogin';
+import Csignup from "./components/Csignup"
 
-const HttpLink = createHttpLink({
+const httpLink = createHttpLink({
   uri: "/graphql",
 });
 const client = new ApolloClient({
-  link: HttpLink,
+  link: httpLink,
   cache: new InMemoryCache(),
 });
 

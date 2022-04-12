@@ -3,7 +3,7 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
 type Contractor {
     _id:ID
-    name:String
+    username:String
     email:String
     typeOfServices:String
     serviceZipcode:Int
@@ -15,12 +15,12 @@ type Contractor {
 type Query {
 loggedContractor : Contractor
 contractors:[Contractor]
-contractor(name:String!): Contractor
+contractor(username:String!): Contractor
 }
 
 type Mutation {
     login (email:String!, password: String!): Auth
-    addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:Int!, bio:String,photo:String,phoneNumber:String!): Auth
+    addContractor(username:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:Int!, bio:String,photo:String,phoneNumber:String!): Auth
 }
 type Auth {
     token: ID!

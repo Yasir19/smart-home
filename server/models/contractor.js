@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 
 const contractorSchema = new Schema(
     {
-        name:{
+        username:{
             type:String,
             required:true,
             trim:true
