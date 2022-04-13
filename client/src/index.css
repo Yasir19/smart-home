@@ -88,6 +88,7 @@ main {
   border: none;
   color: var(--primary);
   transition-duration: 1s;
+  margin: 0 5px;
 }
 
 .form-input:focus {
