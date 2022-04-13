@@ -26,8 +26,13 @@ function Nav(params) {
 						</a>
 					</li>
 					<li className="mx-2">
+						<a data-testid="sign up" href="/UserSignup">
+							Sign Up
+						</a>
+					</li>
+					<li className="mx-2">
 						<a data-testid="login" href="/login">
-							login
+							Login
 						</a>
 					</li>
 					<li className="mx-2">

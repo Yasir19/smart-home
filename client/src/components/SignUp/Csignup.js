@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_CONTRACTOR } from '../utils/mutation';
+import { ADD_CONTRACTOR } from '../../utils/mutation';
 
 const Csignup = () => {
     const [formState, setFormState] = useState({ name: '', email: '', password: '',typeOfServices:'',address:'',driverLicense:'',cert:'',serviceZipcode:'',bio:'',photo:'',phoneNumber:''});
