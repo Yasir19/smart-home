@@ -57,3 +57,30 @@ body {
   background-color: var(--secondary);
   align-items: center;
 }
+
+/* HEADER STYLES */
+header {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  width: 90vw;
+  text-align: center;
+  font-size: 1vw;
+}
+
+header h2 {
+  padding-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5vw;
+}
+
+header nav ul li {
+  width: 25vw;
+}
