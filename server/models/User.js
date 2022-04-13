@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const bcrypt = require('bcrypt')
 
 const UserSchema = new Schema({
 	userName: {
@@ -48,24 +49,21 @@ const UserSchema = new Schema({
 		},
 	},
 	address: {
-		streetAddress: {
-			type: String,
-			trim: true,
-		},
-		city: {
-			type: String,
-			trim: true,
-		},
-		state: {
-			type: String,
-			trim: true,
-		},
-		zipCode: {
-			type: Number,
-			trim: true,
-		},
+		type:String,
+		required:true
 	},
 });
+UserSchema.pre('save', async function(next){
+    if(this.isNew || this.isModified('password')){
+        const saltRound = 10;
+        this.password = await bcrypt.hash(this.password, saltRound);
+    };
+    next();
+})
+// compare the incoming password with the hashed password
+UserSchema.methods.isCorrectPassword = async function(password) {
+    return bcrypt.compare(password, this.password);
+};
 
 // create the User model using UserSchema
 const User = model("User", UserSchema);
