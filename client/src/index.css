@@ -1,4 +1,5 @@
-body {
+/* OLD CODE CSS:2-14. DELETE LATER */
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,76 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* COLOR PALETTE */
+:root {
+  --primary: rgb(201, 120, 15);
+  --secondary: rgb(50, 90, 151);
+  --tertiary: rgb(235, 225, 225);
+  --fourth: rgba(190, 160, 160, 0.75);
+}
+
+/* UNIVERSAL CONSTANTS */
+* {
+  margin: 0;
+  padding: 0;
+  font-variant: small-caps;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+
+  /* visual aid. delete later */
+  /* border: 1px solid red; */
+}
+
+/* A STYLES */
+a {
+  text-decoration: none;
+  color: var(--tertiary);
+  padding: 5px 15px;
+  transition-duration: 1s;
+
+}
+
+a:hover {
+  color: var(--secondary);
+  border-right: 1px solid var(--tertiary);
+  border-left: 1px solid var(--tertiary);
+}
+
+/* BODY STYLES */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: var(--secondary);
+  align-items: center;
+}
+
+/* HEADER STYLES */
+header {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  width: 90vw;
+  text-align: center;
+  font-size: 1vw;
+}
+
+header h2 {
+  padding-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5vw;
+}
+
+header nav ul li {
+  width: 25vw;
 }
