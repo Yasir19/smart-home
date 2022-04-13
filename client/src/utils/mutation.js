@@ -46,3 +46,40 @@ export const ADD_CONTRACTOR = gql`
     }
   }
 `;
+
+export const ADD_USER = gql`
+  mutation addUser(
+    $userName: String!
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $password: String!
+    $phoneNumber: String!
+    $address: {
+      $streetAddress: String!
+      $city: String!
+      $state: String!
+      $zipcode: String!
+    ) {
+    addUser(userName: $userName
+    firstName: $firstName
+    lastName: $lastName
+    email: $email
+    password: $password
+    phoneNumber: $phoneNumber
+    $address: {
+      streetAddress: $streetAddress
+      city: $city
+      state: $state
+      zipcode: $zipcode 
+    ) {
+      token 
+      user {
+        id
+        name
+      }
+    }
+    }
+   }
+  }
+`;
