@@ -1,22 +1,7 @@
-/* OLD CODE CSS:2-14. DELETE LATER */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 /* COLOR PALETTE */
 :root {
   --primary: rgb(201, 120, 15);
-  --secondary: rgb(50, 90, 151);
+  --secondary: rgb(50, 90, 150);
   --tertiary: rgb(235, 225, 225);
   --fourth: rgba(190, 160, 160, 0.75);
 }
@@ -30,7 +15,7 @@ code {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
 
-  /* visual aid. delete later */
+  /* visual aid below (delete later) */
   /* border: 1px solid red; */
 }
 
@@ -59,7 +44,7 @@ body {
 }
 
 /* HEADER STYLES */
-header {
+header, main {
   justify-content: space-around;
   padding: 10px 25px;
   background-color: var(--primary);
@@ -72,6 +57,7 @@ header {
 
 header h2 {
   padding-bottom: 10px;
+  font-size: 2vw;
 }
 
 header nav ul {
@@ -83,4 +69,55 @@ header nav ul {
 
 header nav ul li {
   width: 25vw;
+}
+
+/* MAIN STYLES */
+main {
+  margin: 10px 0;
+}
+
+/* MAIN Clogin.js STYLES */
+.card-header {
+  font-size: 1.75vw;
+}
+
+/* INPUT STYLES */
+.form-input {
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+  color: var(--primary);
+  margin: 0 5px;
+  transition-duration: 1s;
+}
+
+.form-input:focus {
+  color: var(--tertiary);
+  border: none;
+  font-variant: normal;
+  box-shadow: 2px 2px 15px var(--tertiary);
+  background-color: var(--fourth);
+  outline: none;
+}
+
+.form-input:focus::placeholder {
+  color: var(--tertiary);
+  font-variant: small-caps;
+}
+
+.btn {
+  color: var(--secondary);
+  border-radius: 15px;
+  background-color: var(--fourth);
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px var(--secondary);
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  box-shadow: 2px 2px 15px var(--tertiary);
 }
