@@ -1,11 +1,14 @@
 {
-  "name": "smart-home",
+  "name": "deep-thoughts",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,10 @@
     "url": "https://github.com/Yasir19/smart-home/issues"
   },
   "homepage": "https://github.com/Yasir19/smart-home#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
   "dependencies": {
-    "express": "^4.17.3",
-    "mongoose": "^6.2.8"
+    "react-router-dom": "^5.3.0"
   }
 }
