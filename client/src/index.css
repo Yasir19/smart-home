@@ -1,7 +1,7 @@
 /* COLOR PALETTE */
 :root {
   --primary: rgb(201, 120, 15);
-  --secondary: rgb(50, 90, 151);
+  --secondary: rgb(50, 90, 150);
   --tertiary: rgb(235, 225, 225);
   --fourth: rgba(190, 160, 160, 0.75);
 }
@@ -116,5 +116,5 @@ main {
 
 .btn:hover {
   box-shadow: 2px 2px 15px var(--tertiary);
-  font-weight: 150%;
+  /* font-weight: 150%; */
 }
