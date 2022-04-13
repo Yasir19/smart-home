@@ -8,6 +8,9 @@ const resolvers = {
           const params = yourName? {yourName}: {}
           return Createproject.find(params)
       },
+      project: async (parent, {_id}) => {
+        return Createproject.findOne({_id})
+      },
     loggedContractor: async (parent, arags, context) => {
       if (context.contractor) {
         const contractorData = await Contractor.findOne({

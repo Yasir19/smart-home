@@ -39,6 +39,7 @@ user(name:String!): User
 contractors:[Contractor]
 contractor(name:String!): Contractor
 projects(yourName: String): [Projects]
+project(_id: ID!): Projects
 }
 type Mutation {
     login (email:String!, password: String!): Auth
