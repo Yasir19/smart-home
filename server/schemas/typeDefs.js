@@ -22,6 +22,15 @@ type User {
     phoneNumber:String
     address:String
 }
+type Projects {
+    _id:ID
+    projectDescription:String
+    projectMaterials:String
+    yourName:String
+    initPrice:String
+  
+
+}
 type Query {
 loggedContractor : Contractor
 loggedUser : User
@@ -29,6 +38,7 @@ users:[User]
 user(name:String!): User
 contractors:[Contractor]
 contractor(name:String!): Contractor
+projects(yourName: String): [Projects]
 }
 type Mutation {
     login (email:String!, password: String!): Auth

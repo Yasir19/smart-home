@@ -1,9 +1,13 @@
-const { Contractor, User } = require("../models");
+const { Contractor, User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 const resolvers = {
   // query section
   Query: {
+      projects: async (parent,{yourName}) => {
+          const params = yourName? {yourName}: {}
+          return Createproject.find(params)
+      },
     loggedContractor: async (parent, arags, context) => {
       if (context.contractor) {
         const contractorData = await Contractor.findOne({
