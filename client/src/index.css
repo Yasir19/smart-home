@@ -87,8 +87,8 @@ main {
   padding: 15px;
   border: none;
   color: var(--primary);
-  transition-duration: 1s;
   margin: 0 5px;
+  transition-duration: 1s;
 }
 
 .form-input:focus {
@@ -108,14 +108,16 @@ main {
 .btn {
   color: var(--secondary);
   border-radius: 15px;
-  background-color: var(--tertiary);
+  background-color: var(--fourth);
   padding: 15px;
   border: none;
   box-shadow: 2px 2px 15px var(--secondary);
+  font-weight: bold;
   transition-duration: 1s;
 }
 
 .btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
   box-shadow: 2px 2px 15px var(--tertiary);
-  /* font-weight: 150%; */
 }
