@@ -27,7 +27,8 @@
         "driverLicense":"driv3.jpg",
         "typeOfServices":"smart light installation",
         "serviceZipcode": 56187,
-        "phoneNumber": "903-222-6666"
+        "phoneNumber": "903-222-6666",
+        "initPrice": "350"
     },
     {
         "name":"Wanda C. Bogue",

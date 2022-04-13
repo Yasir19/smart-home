@@ -23,6 +23,9 @@ const CreateprojectSchema = new Schema({
 		type: String,
 		required: [true, "who is point of conntact for this project?"],
 	},
+	initPrice: {
+		type:String
+	}
 });
 
 const Createproject = model("Createproject", CreateprojectSchema);
