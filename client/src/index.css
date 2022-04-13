@@ -1,18 +1,3 @@
-/* OLD CODE CSS:2-14. DELETE LATER */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 /* COLOR PALETTE */
 :root {
   --primary: rgb(201, 120, 15);
@@ -59,7 +44,7 @@ body {
 }
 
 /* HEADER STYLES */
-header {
+header, main {
   justify-content: space-around;
   padding: 10px 25px;
   background-color: var(--primary);
@@ -83,4 +68,9 @@ header nav ul {
 
 header nav ul li {
   width: 25vw;
+}
+
+/* MAIN STYLES */
+main {
+  margin: 10px 0;
 }
