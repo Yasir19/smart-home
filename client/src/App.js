@@ -14,7 +14,7 @@ import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
 import UserSignup from "./components/SignUp/UserSignup";
 // import {setContext} function for apollo client to retrieve the token
-import {setContext} from '@apollo/client/link/context'
+import {setContext} from '@apollo/client/link/context';
 
 
 

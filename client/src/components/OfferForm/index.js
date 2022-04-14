@@ -36,7 +36,6 @@ const OfferForm = ({projectId}) => {
           onChange={handleChange}
           className="form-input col-12 col-md-9"
         ></input>
-        <p></p>
         <button className="btn col-12 col-md-3" type="submit">
           Submit
         </button>
