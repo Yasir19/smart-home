@@ -1,9 +1,16 @@
-const { Contractor, User } = require("../models");
+const { Contractor, User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 const resolvers = {
   // query section
   Query: {
+      projects: async (parent,{yourName}) => {
+          const params = yourName? {yourName}: {}
+          return Createproject.find(params)
+      },
+      project: async (parent, {_id}) => {
+        return Createproject.findOne({_id})
+      },
     loggedContractor: async (parent, arags, context) => {
       if (context.contractor) {
         const contractorData = await Contractor.findOne({
@@ -49,6 +56,19 @@ const resolvers = {
       const token = signToken(contractor);
       return { token, contractor };
     },
+    addOffer:async (parent, {projectId, newOffer}, context ) => {
+      if(context.contractor){
+        console.log(context.contractor)
+        const offer = await Createproject.findByIdAndUpdate(
+          {_id: projectId},
+          {$push:{offers:{newOffer, ContractorName: context.contractor.name }}},
+          {new:true}
+        );
+        return offer
+      }
+      console.log('error')
+    },
+
     addUser: async (parent, args) => {
         const user = await User.create(args);
         const token = signToken(user);
