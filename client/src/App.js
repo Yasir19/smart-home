@@ -7,11 +7,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Clogin from './pages/Clogin';
-import Csignup from "./pages/Csignup";
-import Home from "./pages/Home";
-import Project from "./pages/Project";
-import NoMatch from'./pages/NoMatch';
+import Clogin from './components/Login/Clogin';
+import Csignup from "./components/SignUp/Csignup";
+import Home from "./components/ProjectBoard/Home";
+import Project from "./components/SingleProject/Project";
+import NoMatch from'./components/NoMatch/NoMatch';
+import UserSignup from "./components/SignUp/UserSignup";
 
 
 const HttpLink = createHttpLink({
@@ -34,7 +35,7 @@ function App() {
         <Route exact path='/login' component={Clogin}/>
         <Route exact path='/signup' component={Csignup}/>
         <Route exact path='/project/:id' component={Project}/>
-
+        <Route exact path="/UserSignup" component={UserSignup} />
         <Route component={NoMatch}/>
         </Switch>
       </div>

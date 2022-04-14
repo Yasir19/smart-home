@@ -1,9 +1,9 @@
 import React from 'react';
 import {useQuery} from '@apollo/client'
-import { QUERY_PROJECT } from '../utils/queries';
+import { QUERY_PROJECT } from '../../utils/queries';
 import {useParams} from 'react-router-dom'
-import Auth from '../utils/auth'
-import OfferForm from '../components/OfferForm'
+import Auth from '../../utils/auth'
+import OfferForm from '../OfferForm'
 
 
 const Project = (props) => {

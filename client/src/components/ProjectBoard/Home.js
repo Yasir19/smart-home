@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { QUERY_PROJECTS } from "../utils/queries";
-import ProjectList from '../components/ProjectList'
+import { QUERY_PROJECTS } from "../../utils/queries";
+import ProjectList from '../ProjectList'
 const Home = () => {
 const {loading, data} = useQuery(QUERY_PROJECTS)
 
