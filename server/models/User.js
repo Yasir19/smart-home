@@ -50,8 +50,15 @@ const UserSchema = new Schema({
 	},
 	address: {
 		type:String,
-		required:true
+		required:true,
+
 	},
+	role: {
+		type: String,
+		required: true,
+		enum: ['user','contractor'],
+		default:'user'
+	}
 });
 UserSchema.pre('save', async function(next){
     if(this.isNew || this.isModified('password')){

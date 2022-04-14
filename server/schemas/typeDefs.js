@@ -21,6 +21,7 @@ type User {
     password:String
     phoneNumber:String
     address:String
+    role:String
 }
 type Projects {
     _id:ID
@@ -50,7 +51,7 @@ type Mutation {
     login (email:String!, password: String!): Auth
     ulogin (email:String!, password: String!): Auth
     addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:String!, bio:String,photo:String,phoneNumber:String!): Auth
-    addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!): Auth
+    addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!,role:String): Auth
     addOffer(projectId: ID!,newOffer:String! ):Projects
 }
 type Auth {
