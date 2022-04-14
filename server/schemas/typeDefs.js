@@ -28,8 +28,13 @@ type Projects {
     projectMaterials:String
     yourName:String
     initPrice:String
-  
-
+    offers:[Offer]
+}
+type Offer{
+    _id:ID
+    ContractorName:String
+    newOffer:String
+    createdAt:String
 }
 type Query {
 loggedContractor : Contractor
@@ -46,6 +51,7 @@ type Mutation {
     ulogin (email:String!, password: String!): Auth
     addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:String!, bio:String,photo:String,phoneNumber:String!): Auth
     addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!): Auth
+    addOffer(projectId: ID!,newOffer:String! ):Projects
 }
 type Auth {
     token: ID!

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const OfferForm = ({projectId}) => {
   return (
     <div>
@@ -11,7 +12,7 @@ const OfferForm = ({projectId}) => {
           className="form-input col-12 col-md-9"
         ></input>
            <input
-          placeholder="Time of Completion "
+          placeholder="Enter your Name "
           className="form-input col-12 col-md-9"
         ></input>
         <button className="btn col-12 col-md-3" type="submit">
