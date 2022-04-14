@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN_CONTRACTOR } from '../utils/mutation'
-import Auth from '../utils/auth'
+import { LOGIN_CONTRACTOR } from '../../utils/mutation'
+import Auth from '../../utils/auth'
 
 const Clogin = (props) => {
     const [formState, setFormState] = useState({email:'',password:''})
