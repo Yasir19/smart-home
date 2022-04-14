@@ -1,10 +1,13 @@
 const { Schema, model } = require("mongoose");
 
-const CreateprojectSchema = new Schema({
+const createProjectSchema = new Schema({
 	projectDescription: {
 		type: String,
 		required: [true, "Please tell us about your project."],
 		trim: true,
+	},
+	projectOwner: {
+		
 	},
 	projectAddress: {
 		type: String,
