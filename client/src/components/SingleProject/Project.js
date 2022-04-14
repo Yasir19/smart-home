@@ -8,7 +8,6 @@ import OfferForm from '../OfferForm'
 
 const Project = (props) => {
     const {id:projectId} = useParams();
-    const loggedIn =Auth.loggedIn();
 
     const{loading, data} = useQuery(QUERY_PROJECT,{
         variables:{id:projectId}
@@ -31,11 +30,10 @@ const Project = (props) => {
                     <p>init Price: {project.initPrice}</p>
                 </div>
                 <div className="flex-row justify-space-between">
-        {loggedIn && (
           <div className="col-12 mb-3">
-            <OfferForm />
+            {Auth.loggedIn() && <OfferForm projectId={project._id}/>}
             </div>
-        )}
+
       </div>
 
             </div>

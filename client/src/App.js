@@ -13,13 +13,27 @@ import Home from "./components/ProjectBoard/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
 import UserSignup from "./components/SignUp/UserSignup";
+// import {setContext} function for apollo client to retrieve the token
+import {setContext} from '@apollo/client/link/context'
+
 
 
 const HttpLink = createHttpLink({
   uri: "/graphql",
 });
+// middleware function to retrieve the token and combine it with the existing httpLink
+const authLink = setContext((_,{headers})=>{
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token? `Bearer ${token}`:'',
+    },
+  }
+})
 const client = new ApolloClient({
-  link: HttpLink,
+  //combine authLink with the existing httpLink
+  link: authLink.concat(HttpLink),
   cache: new InMemoryCache(),
 });
 
