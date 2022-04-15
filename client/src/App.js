@@ -51,15 +51,10 @@ function App() {
         <div className="container"></div>
         <Switch>
         <Route exact path='/' component={Home}/>
-<<<<<<< HEAD
         <Route exact path="/jobBoard" component={JobBoard}/>
-        <Route exact path='/login' component={Clogin}/>
-        <Route exact path='/signup' component={Csignup}/>
-=======
         <Route exact path='/login' component={Login}/>
-        <Route exact path='/YourProject' component={YourProject}/>
+        <Route exact path="/jobBoard" component={JobBoard}/>
         <Route exact path='/signup' component={Signup}/>
->>>>>>> a7dd9b5f8a790aa1d159d9eda1d90b301456f584
         <Route exact path='/project/:id' component={Project}/>
         <Route exact path='/CreateProject' component={CreateProject}/>
         <Route component={NoMatch}/>
