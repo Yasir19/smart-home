@@ -1,7 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 import InfoPage from "../InfoPage";
-import Services from "../Services";
+import Services from "../OurServices";
 import MostPopular from "../MostPopular/MostPopular";
 
 const Landingpage = () => {
