@@ -55,31 +55,33 @@ export const ADD_USER = gql`
     $email: String!
     $password: String!
     $phoneNumber: String!
-    $address: {
-      $streetAddress: String!
-      $city: String!
-      $state: String!
-      $zipcode: String!
+    $address: String!
+  ) {
+    addUser(
+      userName: $userName
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+      phoneNumber: $phoneNumber
+      address: $address
     ) {
-    addUser(userName: $userName
-    firstName: $firstName
-    lastName: $lastName
-    email: $email
-    password: $password
-    phoneNumber: $phoneNumber
-    $address: {
-      streetAddress: $streetAddress
-      city: $city
-      state: $state
-      zipcode: $zipcode 
-    ) {
-      token 
-      user {
-        id
+      token
+      User {
+        _id
         name
       }
     }
+  }
+`;
+export const ADD_OFFER = gql`
+  mutation addOffer($projectId: ID!, $newOffer: String!) {
+    addOffer(projectId: $projectId, newOffer: $newOffer) {
+      _id
+      offers {
+        ContractorName
+        
+      }
     }
-   }
   }
 `;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_CONTRACTOR } from '../utils/mutation';
+import { ADD_CONTRACTOR } from '../../utils/mutation';
+import Auth from '../../utils/auth'
 
 const Csignup = () => {
     const [formState, setFormState] = useState({ name: '', email: '', password: '',typeOfServices:'',address:'',driverLicense:'',cert:'',serviceZipcode:'',bio:'',photo:'',phoneNumber:''});
@@ -27,7 +28,7 @@ const Csignup = () => {
               variables:{...formState}
           });
           console.log(data);
-
+          Auth.login(data.addContractor.token)
       } catch (e){
           console.error(e)
       }
