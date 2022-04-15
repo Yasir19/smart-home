@@ -13,6 +13,7 @@ import Home from "./components/ProjectBoard/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
 import {setContext} from '@apollo/client/link/context';
+import CreateProject from "./components/CreateProject/CreateProject";
 
 
 
@@ -47,6 +48,7 @@ function App() {
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/project/:id' component={Project}/>
+        <Route exact path='/CreateProject' component={CreateProject}/>
         <Route component={NoMatch}/>
         </Switch>
       </div>
