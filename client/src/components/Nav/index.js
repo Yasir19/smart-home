@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
+import CreateProject from "../CreateProject/CreateProject";
 
 function Nav(params) {
   const logout = (e) => {
@@ -22,9 +23,7 @@ function Nav(params) {
             </a>
           </li>
           <li className="mx-2">
-            <a data-testid="Your Home" href="/createProject">
-              Create your project
-            </a>
+            <Link to="/CreateProject">Create Project</Link>
           </li>
           <li className="mx-2">
             <a data-testid="join" href="/signup">
