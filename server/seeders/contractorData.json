@@ -6,7 +6,7 @@
         "email":"alberto.h@gmail.com",
         "password":"123456789",
         "address":"1993 Lakeland Terrace Southfield, MI 48034",
-        "phoneNumber": "903-222-4444",
+        "phoneNumber": "904-222-4444",
         "role":"contractor",
         "typeOfServices":"home theater",
         "serviceZipcode": "48034"
@@ -18,7 +18,7 @@
         "email":"seanjackson1@gmail.com",
         "password":"123456789",
         "address":"2485 Victoria Street Baton Rouge, LA 70801",
-        "phoneNumber": "903-222-3333",
+        "phoneNumber": "903-222-3363",
         "role":"contractor",
         "typeOfServices":"WiFi Optimizer",
         "serviceZipcode": "70801"
@@ -31,7 +31,7 @@
         "password":"123456789",
         "address":"2060 Rosewood Court Worthington, MN 56187",
         "role":"contractor",
-        "phoneNumber": "903-222-6666",
+        "phoneNumber": "903-212-6636",
         "typeOfServices":"smart light installation",
         "serviceZipcode": "56187"
     },
@@ -42,7 +42,7 @@
         "email":"andacbogue@gmail.com",
         "password":"123456789",
         "address":"2947 Hickory Ridge Drive Las Vegas, NV 89119",
-        "phoneNumber": "903-222-4444",
+        "phoneNumber": "903-212-4474",
         "role":"contractor",
         "typeOfServices":"WiFi Optimizer",
         "serviceZipcode": "89119"

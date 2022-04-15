@@ -36,15 +36,9 @@ const UserSchema = new Schema({
 		minlength: 9,
 	},
 	phoneNumber: {
-		type: String,
-		required: [true, "phone number is required"],
-		unique: true,
-		validate: {
-			validator: function (v) {
-				return /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/.test(v);
-			},
-			message: (props) => `${props.value} is not a valid phone number`,
-		},
+		type:String,
+		required:true,
+		match:[ /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'must match a phone number']
 	},
 	address: {
 		type:String,
