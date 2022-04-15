@@ -7,13 +7,11 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Clogin from './components/Login/Clogin';
-import Csignup from "./components/SignUp/Csignup";
+import Login from "./components/Login/Login";
+import Signup from "./components/SignUp/Signup";
 import Home from "./components/ProjectBoard/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
-import UserSignup from "./components/SignUp/UserSignup";
-// import {setContext} function for apollo client to retrieve the token
 import {setContext} from '@apollo/client/link/context';
 
 
@@ -46,10 +44,9 @@ function App() {
         <div className="container"></div>
         <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/login' component={Clogin}/>
-        <Route exact path='/signup' component={Csignup}/>
+        <Route exact path='/login' component={Login}/>
+        <Route exact path='/signup' component={Signup}/>
         <Route exact path='/project/:id' component={Project}/>
-        <Route exact path="/UserSignup" component={UserSignup} />
         <Route component={NoMatch}/>
         </Switch>
       </div>
