@@ -12,10 +12,10 @@
         "serviceZipcode": "48034"
     },
     {
-        "name":"Sean L. Jackson",
+        "userName":"Sean L. Jackson",
         "firstName":"Sean L",
         "lastName":"Jackson",
-        "email":"SeanLJackson@gmail.com",
+        "email":"seanjackson1@gmail.com",
         "password":"123456789",
         "address":"2485 Victoria Street Baton Rouge, LA 70801",
         "phoneNumber": "903-222-3333",
@@ -24,7 +24,7 @@
         "serviceZipcode": "70801"
     },
     {
-        "name":"Troy M. Rucker",
+        "userName":"Troy M. Rucker",
         "firstName":"Troy M",
         "lastName":"Rucker",
         "email":"troy.m@gmail.com",
@@ -36,10 +36,10 @@
         "serviceZipcode": "56187"
     },
     {
-        "name":"Wanda C. Bogue",
+        "userName":"Wanda C. Bogue",
         "firstName":"Wanda C",
         "lastName":"Bogue",
-        "email":"andaCBogue@gmail.com",
+        "email":"andacbogue@gmail.com",
         "password":"123456789",
         "address":"2947 Hickory Ridge Drive Las Vegas, NV 89119",
         "phoneNumber": "903-222-4444",
