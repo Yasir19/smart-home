@@ -43,6 +43,14 @@ const Signup = () => {
     }
   };
 
+  //option state 
+  const [roleState, setRoleState] = useState('Customer')
+
+  const optionHandleChange = (e) => {
+    const selectedRole = e.target.value
+    setRoleState(selectedRole);
+  }
+
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-md-6">
@@ -119,9 +127,9 @@ const Signup = () => {
                 name="role"
                 type="text"
                 id="role"
-                value={formState.driverLicense}
+                value={formState.role}
                 onChange={handleChange}
-              />
+                />
               <input
                 className="form-input"
                 placeholder="Services"
