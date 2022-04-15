@@ -21,14 +21,14 @@ function Nav(params) {
               Your Home
             </a>
           </li>
-          <li className="mx-2">
-            <a data-testid="Your Home" href="/createProject">
-              Create your project
+		  <li className="mx-2">
+            <a data-testid="Job Board" href="/jobBoard">
+              Job Board
             </a>
           </li>
           <li className="mx-2">
-            <a data-testid="join" href="/signup">
-              Join Smart Team
+            <a data-testid="Your Home" href="/createProject">
+              Create your project
             </a>
           </li>
           <li className="mx-2">
