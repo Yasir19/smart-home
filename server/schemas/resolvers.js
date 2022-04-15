@@ -48,7 +48,6 @@ const resolvers = {
       }
       console.log('error')
     },
-
     addUser: async (parent, args) => {
         const user = await User.create(args);
         const token = signToken(user);
