@@ -46,3 +46,42 @@ export const ADD_CONTRACTOR = gql`
     }
   }
 `;
+
+export const ADD_USER = gql`
+  mutation addUser(
+    $userName: String!
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $password: String!
+    $phoneNumber: String!
+    $address: String!
+  ) {
+    addUser(
+      userName: $userName
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+      phoneNumber: $phoneNumber
+      address: $address
+    ) {
+      token
+      User {
+        _id
+        name
+      }
+    }
+  }
+`;
+export const ADD_OFFER = gql`
+  mutation addOffer($projectId: ID!, $newOffer: String!) {
+    addOffer(projectId: $projectId, newOffer: $newOffer) {
+      _id
+      offers {
+        ContractorName
+        
+      }
+    }
+  }
+`;
