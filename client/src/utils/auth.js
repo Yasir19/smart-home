@@ -36,6 +36,14 @@ class AuthService {
           localStorage.setItem('id_token', idToken);
           window.location.assign('/');
       }
+      role(){
+        const token = localStorage.getItem('id_token');
+        const values = decode(token)
+       const role = values.data.role
+       if(role !== 'contractor'){
+        window.location.assign('/');
+       }
+      }
       //clear token from localStorage and force logout with reload
       logout() {
           //cleare user token and profile data from localStorage

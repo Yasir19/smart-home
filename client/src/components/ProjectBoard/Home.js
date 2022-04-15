@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PROJECTS } from "../../utils/queries";
 import ProjectList from '../ProjectList'
 import Landingpage from "../landingPage";
+import Auth from '../../utils/auth'
 const Home = () => {
 const {loading, data} = useQuery(QUERY_PROJECTS)
 
@@ -19,7 +20,7 @@ return (
             {loading ? (
                 <div>loading...</div>
             ):(
-                <ProjectList projects={projects} title="Some Feed for Project(s)..."/>
+               <ProjectList projects={projects} title="Some Feed for Project(s)..."/>
             )}
         </div>
       </div>
