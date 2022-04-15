@@ -20,9 +20,9 @@ export const ADD_USER = gql`
     $password: String!
     $phoneNumber: String!
     $address: String!
-    $role:String!
-    $typeOfServices:String
-    $serviceZipcode:String
+    $role: String!
+    $typeOfServices: String
+    $serviceZipcode: String
   ) {
     addUser(
       userName: $userName
@@ -32,9 +32,9 @@ export const ADD_USER = gql`
       password: $password
       phoneNumber: $phoneNumber
       address: $address
-      role:$role
-      typeOfServices:$typeOfServices
-      serviceZipcode:$serviceZipcode
+      role: $role
+      typeOfServices: $typeOfServices
+      serviceZipcode: $serviceZipcode
     ) {
       token
       user {
@@ -52,8 +52,28 @@ export const ADD_OFFER = gql`
       _id
       offers {
         ContractorName
-        
       }
+    }
+  }
+`;
+export const ADD_PROJECT = gql`
+  mutation addProject(
+    $projectDescription: String!
+    $projectMaterials: String!
+    $projectZipCode: String!
+    $initPrice: String!
+  ) {
+    addProject(
+      projectDescription: $projectDescription
+      projectMaterials: $projectMaterials
+      projectZipCode: $projectZipCode
+      initPrice: $initPrice
+    ) {
+      _id
+      initPrice
+      projectDescription
+      projectMaterials
+      yourName
     }
   }
 `;

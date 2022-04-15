@@ -52,7 +52,21 @@ const resolvers = {
         const user = await User.create(args);
         const token = signToken(user);
         return {token,user};
-      },
+    },
+
+    addProject: async(parent, args, context) => {
+      if (context.user) {
+        const project = await Createproject.create({ ...args, yourName: context.user.userName })
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $push: {projects: project._id}},
+          { new: true }
+        )
+        return project;
+      }
+      throw new AuthenticationError("Please Login to Continue")
+    }, 
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!User) {

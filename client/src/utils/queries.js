@@ -22,13 +22,15 @@ query project($id:ID!) {
   }
 }
 `;
-export const QUERY_CUSTOMER =gql`
+export const QUERY_CUSTOMER = gql`
 {
   loggedUser
-     {
+  {  
     _id
     userName
     email
   }
 }
 `;
+
+
