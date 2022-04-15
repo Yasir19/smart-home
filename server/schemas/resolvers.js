@@ -1,4 +1,4 @@
-const { Contractor, User, Createproject } = require("../models");
+const {User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 const resolvers = {
@@ -11,70 +11,63 @@ const resolvers = {
       project: async (parent, {_id}) => {
         return Createproject.findOne({_id})
       },
-    loggedContractor: async (parent, arags, context) => {
-      if (context.contractor) {
-        const contractorData = await Contractor.findOne({
-          _id: context.contractor._id,
-        }).select("-__v -password");
+    loggedUser: async (parent, arags, context) => {
+      if (context.user) {
+        const userData = await User.findOne({
+          _id: context.user._id,
+        })
+        .select("-__v -password")
 
-        return contractorData;
+        return userData;
       }
       throw new AuthenticationError("Not logged in");
     },
-    // get all contractors
-    contractors: async () => {
-      return Contractor.find().select("-__v -password");
+    // get all user
+    user: async () => {
+      return User.find().select("-__v -password");
     },
-    // get contractor by name
-    contractor: async (parent, { name }) => {
-      return Contractor.findOne({ name }).select("-__v -password");
-    },
+
     user: async (parent, { username }) => {
       return User.findOne({ username }).select("-__v -password");
     },
-    // get all contractors
+    // get all user
     users: async () => {
       return User.find().select("-__v -password");
     },
   },
   Mutation: {
-    addContractor: async (parent, args) => {
-      const contractor = await Contractor.create(args);
-      const token = signToken(contractor);
-      return { token, contractor };
-    },
-    login: async (parent, { email, password }) => {
-      const contractor = await Contractor.findOne({ email });
-      if (!contractor) {
-        throw new AuthenticationError("Incorrect credentials");
-      }
-      const correctPassword = await contractor.isCorrectPassword(password);
-
-      if (!correctPassword) {
-        throw new AuthenticationError("Incorrect credentials");
-      }
-      const token = signToken(contractor);
-      return { token, contractor };
-    },
     addOffer:async (parent, {projectId, newOffer}, context ) => {
-      if(context.contractor){
-        console.log(context.contractor)
+      if(context.user){
+        console.log(context.user)
         const offer = await Createproject.findByIdAndUpdate(
           {_id: projectId},
-          {$push:{offers:{newOffer, ContractorName: context.contractor.name }}},
+          {$push:{offers:{newOffer, ContractorName: context.user.name }}},
           {new:true}
         );
         return offer
       }
       console.log('error')
     },
-
     addUser: async (parent, args) => {
         const user = await User.create(args);
         const token = signToken(user);
         return {token,user};
-      },
-    ulogin: async (parent, { email, password }) => {
+    },
+
+    addProject: async(parent, args, context) => {
+      if (context.user) {
+        const project = await Createproject.create({ ...args, yourName: context.user.userName })
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $push: {projects: project._id}},
+          { new: true }
+        )
+        return project;
+      }
+      throw new AuthenticationError("Please Login to Continue")
+    }, 
+
+    login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!User) {
         throw new AuthenticationError("Incorrect credentials");
