@@ -1,42 +1,50 @@
 [
     {
-        "name":"Alberto Harrison",
+        "userName":"Alberto Harrison",
+        "firstName":"Alberto",
+        "lastName":"Harrison",
         "email":"alberto.h@gmail.com",
         "password":"123456789",
         "address":"1993 Lakeland Terrace Southfield, MI 48034",
-        "driverLicense":"driv1.jpg",
+        "phoneNumber": "903-222-4444",
+        "role":"contractor",
         "typeOfServices":"home theater",
-        "serviceZipcode": 48034,
-        "phoneNumber": "903-222-4444"
+        "serviceZipcode": "48034"
     },
     {
         "name":"Sean L. Jackson",
+        "firstName":"Sean L",
+        "lastName":"Jackson",
         "email":"SeanLJackson@gmail.com",
         "password":"123456789",
         "address":"2485 Victoria Street Baton Rouge, LA 70801",
-        "driverLicense":"driv2.jpg",
+        "phoneNumber": "903-222-3333",
+        "role":"contractor",
         "typeOfServices":"WiFi Optimizer",
-        "serviceZipcode": 70801,
-        "phoneNumber": "903-222-3333"
+        "serviceZipcode": "70801"
     },
     {
         "name":"Troy M. Rucker",
+        "firstName":"Troy M",
+        "lastName":"Rucker",
         "email":"troy.m@gmail.com",
         "password":"123456789",
         "address":"2060 Rosewood Court Worthington, MN 56187",
-        "driverLicense":"driv3.jpg",
+        "role":"contractor",
+        "phoneNumber": "903-222-6666",
         "typeOfServices":"smart light installation",
-        "serviceZipcode": 56187,
-        "phoneNumber": "903-222-6666"
+        "serviceZipcode": "56187"
     },
     {
         "name":"Wanda C. Bogue",
+        "firstName":"Wanda C",
+        "lastName":"Bogue",
         "email":"andaCBogue@gmail.com",
         "password":"123456789",
         "address":"2947 Hickory Ridge Drive Las Vegas, NV 89119",
-        "driverLicense":"driv4.jpg",
+        "phoneNumber": "903-222-4444",
+        "role":"contractor",
         "typeOfServices":"WiFi Optimizer",
-        "serviceZipcode": 89119,
-        "phoneNumber": "903-222-4444"
+        "serviceZipcode": "89119"
     }
 ]

@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER} from '../../utils/mutation'
 import Auth from '../../utils/auth'
 
-const Clogin = (props) => {
+const Login = (props) => {
     const [formState, setFormState] = useState({email:'',password:''})
     const [login, {error}] = useMutation(LOGIN_USER)
       // update state based on form input changes
@@ -62,6 +62,7 @@ const Clogin = (props) => {
                 Submit
               </button>
             </form>
+            {error && <div>Check your Information</div>}
           </div>
         </div>
       </div>
@@ -69,4 +70,4 @@ const Clogin = (props) => {
   );
 
 }
-export default Clogin
+export default Login

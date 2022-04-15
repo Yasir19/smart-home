@@ -10,13 +10,11 @@ const UserSchema = new Schema({
 	},
 	firstName: {
 		type: String,
-		unique: true,
 		required: [true, "firstname is required"],
 		trim: true,
 	},
 	lastName: {
 		type: String,
-		unique: true,
 		required: [true, "lastname is required"],
 		trim: true,
 	},
