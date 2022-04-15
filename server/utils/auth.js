@@ -23,9 +23,9 @@ module.exports = {
       // decode and attach user data to request object
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       console.log(data)
-      // if(req.contractor){
+      if(data.role){
         req.contractor = data;
-      // }
+      }
       req.user = data
       
     } catch {

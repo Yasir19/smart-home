@@ -53,6 +53,10 @@ const contractorSchema = new Schema(
             type:String,
             required:true,
             match:[ /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'must match a phone number']
+        },
+        role: {
+            type: Boolean,
+            default:true
         }
     }
 );
