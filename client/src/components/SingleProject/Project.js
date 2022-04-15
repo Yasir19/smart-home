@@ -31,7 +31,7 @@ const Project = (props) => {
                 </div>
                 <div className="flex-row justify-space-between">
           <div className="col-12 mb-3">
-            {Auth.loggedIn() && <OfferForm projectId={project._id}/>}
+            {Auth.contractorLoggedIn()&& <OfferForm projectId={project._id}/>}
             </div>
 
       </div>

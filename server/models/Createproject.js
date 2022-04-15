@@ -23,7 +23,7 @@ const CreateprojectSchema = new Schema(
     },
     yourName: {
       type: String,
-      required: [true, "who is point of conntact for this project?"],
+      required: true
     },
     initPrice: {
       type: String,

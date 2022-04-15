@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "./components/Nav";
 import {
   ApolloProvider,
   ApolloClient,
@@ -7,8 +6,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Clogin from './components/Login/Clogin';
-import Csignup from "./components/SignUp/Csignup";
+import {setContext} from '@apollo/client/link/context'
+import Login from "./components/Login/Login";
+import Signup from "./components/SignUp/Signup";
 import Home from "./components/ProjectBoard/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
@@ -18,6 +18,9 @@ import JobBoard from "./components/JobBoard/jobBoard";
 import {setContext} from '@apollo/client/link/context';
 
 
+import Nav from "./components/Nav";
+import YourProject from "./components/YourProject";
+import CreateProject from "./components/CreateProject/CreateProject";
 
 const HttpLink = createHttpLink({
   uri: "/graphql",
@@ -39,6 +42,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+        
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -47,11 +51,17 @@ function App() {
         <div className="container"></div>
         <Switch>
         <Route exact path='/' component={Home}/>
+<<<<<<< HEAD
         <Route exact path="/jobBoard" component={JobBoard}/>
         <Route exact path='/login' component={Clogin}/>
         <Route exact path='/signup' component={Csignup}/>
+=======
+        <Route exact path='/login' component={Login}/>
+        <Route exact path='/YourProject' component={YourProject}/>
+        <Route exact path='/signup' component={Signup}/>
+>>>>>>> a7dd9b5f8a790aa1d159d9eda1d90b301456f584
         <Route exact path='/project/:id' component={Project}/>
-        <Route exact path="/UserSignup" component={UserSignup} />
+        <Route exact path='/CreateProject' component={CreateProject}/>
         <Route component={NoMatch}/>
         </Switch>
       </div>

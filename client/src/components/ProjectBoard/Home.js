@@ -19,7 +19,7 @@ return (
             {loading ? (
                 <div>loading...</div>
             ):(
-                <ProjectList projects={projects} title="Some Feed for Project(s)..."/>
+               <ProjectList projects={projects} title="Some Feed for Project(s)..."/>
             )}
         </div> */}
       </div>
