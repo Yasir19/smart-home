@@ -123,7 +123,7 @@ const Signup = () => {
               />
               <input
                 className="form-input"
-                placeholder="Join Smart Team"
+                placeholder="Role"
                 name="role"
                 type="text"
                 id="role"
