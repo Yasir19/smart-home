@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "./components/Nav";
 import {
   ApolloProvider,
   ApolloClient,
@@ -7,12 +6,15 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {setContext} from '@apollo/client/link/context'
 import Login from "./components/Login/Login";
 import Signup from "./components/SignUp/Signup";
 import Home from "./components/ProjectBoard/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from'./components/NoMatch/NoMatch';
-import {setContext} from '@apollo/client/link/context';
+import Nav from "./components/Nav";
+import YourProject from "./components/YourProject";
+
 
 
 
@@ -47,6 +49,7 @@ function App() {
         <Switch>
         <Route exact path='/' component={Home}/>
         <Route exact path='/login' component={Login}/>
+        <Route exact path='/YourProject' component={YourProject}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/project/:id' component={Project}/>
         <Route component={NoMatch}/>

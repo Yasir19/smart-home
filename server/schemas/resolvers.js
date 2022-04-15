@@ -15,7 +15,8 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({
           _id: context.user._id,
-        }).select("-__v -password");
+        })
+        .select("-__v -password")
 
         return userData;
       }

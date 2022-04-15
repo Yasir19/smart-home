@@ -37,9 +37,10 @@ function Nav(params) {
             </a>
           </li>
           <li className="mx-2">
-            {Auth.loggedIn() ? (
+            {Auth.LoggedIn() ? (
               <>
                 <Link to="/"> Home</Link>
+                <Link to='/YourProject'>YourProject</Link>
                 <a data-testid="log Out" href="/" onClick={logout}>
                   Log Out
                 </a>

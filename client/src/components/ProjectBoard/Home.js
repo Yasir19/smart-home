@@ -3,7 +3,6 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PROJECTS } from "../../utils/queries";
 import ProjectList from '../ProjectList'
 import Landingpage from "../landingPage";
-import Auth from '../../utils/auth'
 const Home = () => {
 const {loading, data} = useQuery(QUERY_PROJECTS)
 
