@@ -38,24 +38,24 @@ const resolvers = {
     },
   },
   Mutation: {
-    addContractor: async (parent, args) => {
-      const contractor = await Contractor.create(args);
-      const token = signToken(contractor);
-      return { token, contractor };
-    },
-    login: async (parent, { email, password }) => {
-      const contractor = await Contractor.findOne({ email });
-      if (!contractor) {
-        throw new AuthenticationError("Incorrect credentials");
-      }
-      const correctPassword = await contractor.isCorrectPassword(password);
+    // addContractor: async (parent, args) => {
+    //   const contractor = await Contractor.create(args);
+    //   const token = signToken(contractor);
+    //   return { token, contractor };
+    // },
+    // login: async (parent, { email, password }) => {
+    //   const contractor = await Contractor.findOne({ email });
+    //   if (!contractor) {
+    //     throw new AuthenticationError("Incorrect credentials");
+    //   }
+    //   const correctPassword = await contractor.isCorrectPassword(password);
 
-      if (!correctPassword) {
-        throw new AuthenticationError("Incorrect credentials");
-      }
-      const token = signToken(contractor);
-      return { token, contractor };
-    },
+    //   if (!correctPassword) {
+    //     throw new AuthenticationError("Incorrect credentials");
+    //   }
+    //   const token = signToken(contractor);
+    //   return { token, contractor };
+    // },
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.contractor){
         console.log(context.contractor)
@@ -74,7 +74,7 @@ const resolvers = {
         const token = signToken(user);
         return {token,user};
       },
-    ulogin: async (parent, { email, password }) => {
+    login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!User) {
         throw new AuthenticationError("Incorrect credentials");

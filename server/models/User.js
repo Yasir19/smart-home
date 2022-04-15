@@ -56,8 +56,8 @@ const UserSchema = new Schema({
 	role: {
 		type: String,
 		required: true,
-		enum: ['user','contractor'],
-		default:'user'
+		enum: ['customer','contractor'],
+		default:'customer'
 	}
 });
 UserSchema.pre('save', async function(next){
