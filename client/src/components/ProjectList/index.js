@@ -8,7 +8,7 @@ const ProjectList = ({projects, projectDescription}) => {
     return(
         <div>
             <h3> {projectDescription}</h3>
-            {projects && projects.map(project =>(
+            {projects && projects.map((project) =>(
                
                 <div key={project._id}
                  className='card mb-3'>

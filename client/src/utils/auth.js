@@ -33,7 +33,7 @@ class AuthService {
 		//get the role value
 		const role = decodeToken.data.role;
 		// check if this token has a role valye of customer
-		if (role === "Contractor") {
+		if (role === "contractor") {
 			// use type coersion to check if token is NOT undefined and the token is NOT expired
 			return !!token && !this.isTokenExpired(token);
 		} else {
