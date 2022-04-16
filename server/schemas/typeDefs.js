@@ -33,7 +33,7 @@ type Offer{
 type Query {
 loggedUser : User
 users:[User]
-user(name:String!): User
+user(userName:String!): User
 projects(yourName: String): [Projects]
 project(_id: ID!): Projects
 }
