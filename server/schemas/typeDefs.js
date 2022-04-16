@@ -13,7 +13,7 @@ type User {
     role:String
     typeOfServices:String
     serviceZipcode:String
-}
+    projects:[Projects]
 type Projects {
     _id:ID
     projectDescription:String

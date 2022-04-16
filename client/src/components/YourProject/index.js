@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Redirect} from 'react-router-dom'
-import {useQuery, useMutation} from '@apollo/client'
+import {useQuery} from '@apollo/client'
 import { QUERY_CUSTOMER } from '../../utils/queries';
 import Auth from '../../utils/auth'
 import ProjectList from '../ProjectList'
@@ -13,13 +13,13 @@ const YourProject = () => {
     const user = data?.loggedUser || {};
 
     // redirect to personal profile page if username is the logged-in user's
-  if(Auth.customerLoggedIn() && Auth.getProfile().data.username === userParam)
+  if(Auth.customerLoggedIn() && Auth.getProfile().data.userName === userParam)
 
   return <Redirect to ='/YourProject'/>
   if(loading){
       return <div> loading ... </div>
   }
-  if(!user?.username){
+  if(!user?.userName){
       return (
           <h4>
               You need to be logged in to see this page. Use the navigation links above to sign up or log in 
