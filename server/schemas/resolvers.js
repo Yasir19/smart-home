@@ -36,6 +36,14 @@ const resolvers = {
     },
   },
   Mutation: {
+    approveOffer: async(parent,{projectId, newOffer,}, contect ) => {
+      if(context.user){
+        const approvedOffer = await Createproject.findOneAndUpdate(
+          {}
+        )
+      }
+    },
+
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.user){
         console.log(context.user)
