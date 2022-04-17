@@ -1,6 +1,7 @@
 import React from "react";
 import Landingpage from "../landingPage";
 
+
 const Home = () => {
 	return (
 		<main>

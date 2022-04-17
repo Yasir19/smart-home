@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectList = ({ projects, projectDescription }) => {
-	// console.log("list", projects);
 	if (!projects.length) {
 		return <h3> No Available Projects Yet </h3>;
 	}
