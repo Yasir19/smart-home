@@ -28,6 +28,13 @@ export const QUERY_CUSTOMER = gql`
 			_id
 			userName
 			email
+			projects {
+				_id
+				userName
+				projectDescription
+				initPrice
+				projectMaterials
+			}
 		}
 	}
 `;
