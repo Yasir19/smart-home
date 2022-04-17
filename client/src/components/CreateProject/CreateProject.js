@@ -26,7 +26,8 @@ function CreateProject () {
             await addProject({
                 variables: { ...projectForm }
             })
-            setProjectForm('')
+            window.location.reload()
+
         } catch (err) {
             console.log(err)
         }

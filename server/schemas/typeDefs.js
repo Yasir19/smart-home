@@ -20,7 +20,7 @@ type Projects {
     projectDescription:String
     projectMaterials:String
     projectZipCode:String
-    yourName:String
+    userName:String
     initPrice:String
     offers:[Offer]
 }
@@ -34,7 +34,7 @@ type Query {
 loggedUser : User
 users:[User]
 user(userName:String!): User
-projects(yourName: String): [Projects]
+projects(userName: String): [Projects]
 project(_id: ID!): Projects
 }
 type Mutation {

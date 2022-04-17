@@ -73,7 +73,7 @@ export const ADD_PROJECT = gql`
       initPrice
       projectDescription
       projectMaterials
-      yourName
+      userName
     }
   }
 `;

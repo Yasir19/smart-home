@@ -17,6 +17,7 @@ import YourProject from "./components/YourProject/index";
 import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
 
+
 const HttpLink = createHttpLink({
 	uri: "/graphql",
 });
@@ -46,7 +47,7 @@ function App() {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={Login} />
-						<Route exact path="/YourProject" component={YourProject} />
+						<Route exact path="/YourProject/:userName?" component={YourProject} />
 						<Route exact path="/signup" component={Signup} />
 						<Route exact path="/project/:id" component={Project} />
 						<Route exact path="/CreateProject" component={CreateProject} />

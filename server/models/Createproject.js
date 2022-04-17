@@ -21,7 +21,7 @@ const CreateprojectSchema = new Schema(
 			required: false,
 			trim: true,
 		},
-		yourName: {
+		userName: {
 			type: String,
 			required: true,
 		},
