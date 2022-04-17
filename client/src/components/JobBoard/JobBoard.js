@@ -22,7 +22,6 @@ const Job = () => {
 
                 )}
             </div>
-            <YourProject projects = {projects}/>
           </div>
         </main>
       );
