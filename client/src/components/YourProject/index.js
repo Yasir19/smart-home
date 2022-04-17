@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_CUSTOMER } from "../../utils/queries";
 import Auth from "../../utils/auth";
 import ProjectList from "../ProjectList";
+import OfferList from "../OfferList";
 const YourProject = () => {
 	const { userName: userParam } = useParams();
 	const { loading, data } = useQuery(QUERY_CUSTOMER, {
@@ -36,6 +37,12 @@ const YourProject = () => {
 					<ProjectList projects={user.projects}></ProjectList>
 				</div>
 			</div>
+			<div className="flex-row justify-space-between mb-3">
+				<div className="col-12 mb-3 col-lg mb-3">
+					<OfferList projects={user.offers}></OfferList>
+				</div>
+				</div>
+			
 		</div>
 	);
 };

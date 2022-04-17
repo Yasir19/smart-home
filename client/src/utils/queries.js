@@ -8,6 +8,12 @@ export const QUERY_PROJECTS = gql`
 			projectMaterials
 			initPrice
 			userName
+			offers{
+				_id
+				ContractorName
+				newOffer
+
+			}
 		}
 	}
 `;
@@ -19,24 +25,35 @@ export const QUERY_PROJECT = gql`
 			projectMaterials
 			initPrice
 			userName
+			offers{
+				_id
+				ContractorName
+				newOffer
+
+			}
 		}
 	}
 `;
 export const QUERY_CUSTOMER = gql`
-	{
-		loggedUser {
-			_id
-			userName
-			email
-			projects {
-				_id
-				userName
-				projectDescription
-				initPrice
-				projectMaterials
-			}
+{
+	loggedUser
+	   {
+	  _id
+	  userName
+	  email
+	  projects {
+		initPrice
+		projectDescription
+		projectZipCode
+		projectMaterials
+		offers {
+		  ContractorName
+		  newOffer
 		}
+	  }
+	  
 	}
+  }
 `;
 
 export const QUERY_USER = gql`
@@ -49,6 +66,7 @@ export const QUERY_USER = gql`
 				_id
 				projectDescription
 				initPrice
+				userName
 			}
 		}
 	}

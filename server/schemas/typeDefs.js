@@ -14,6 +14,7 @@ type User {
     typeOfServices:String
     serviceZipcode:String
     projects:[Projects]
+    
 }
 type Projects {
     _id:ID
