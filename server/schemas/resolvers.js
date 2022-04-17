@@ -1,6 +1,7 @@
 const {User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+const { populate } = require("../models/User");
 const resolvers = {
   // query section
   Query: {
@@ -17,7 +18,7 @@ const resolvers = {
           _id: context.user._id,
         })
         .select("-__v -password")
-        .populate('projects')
+        .populate("projects")
 
         return userData;
       }

@@ -51,7 +51,6 @@ export const QUERY_CUSTOMER = gql`
 		  newOffer
 		}
 	  }
-	  
 	}
   }
 `;
@@ -64,7 +63,9 @@ export const QUERY_USER = gql`
 			email
 			projects {
 				_id
+				userName
 				projectDescription
+				projectMaterials
 				initPrice
 				userName
 			}
