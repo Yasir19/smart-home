@@ -35,11 +35,11 @@ const YourProject = () => {
 			<div className="flex-row justify-space-between mb-3">
 				<div className="col-12 mb-3 col-lg mb-3">
 					<ProjectList projects={user.projects}></ProjectList>
+					<OfferList offers={user.offers}></OfferList>
 				</div>
 			</div>
 			<div className="flex-row justify-space-between mb-3">
 				<div className="col-12 mb-3 col-lg mb-3">
-					<OfferList projects={user.offers}></OfferList>
 				</div>
 				</div>
 			

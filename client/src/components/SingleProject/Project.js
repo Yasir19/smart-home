@@ -35,7 +35,6 @@ const Project = () => {
             {Auth.LoggedIn()&& <OfferForm projectId={project._id}/>}
              <OfferList offers={project.offers}/>
             </div>
-
       </div>
 
             </div>
