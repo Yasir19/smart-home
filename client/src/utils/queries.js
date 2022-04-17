@@ -32,8 +32,8 @@ export const QUERY_CUSTOMER = gql`
 				_id
 				userName
 				projectDescription
-				initPrice
 				projectMaterials
+				initPrice
 			}
 		}
 	}
@@ -47,7 +47,9 @@ export const QUERY_USER = gql`
 			email
 			projects {
 				_id
+				userName
 				projectDescription
+				projectMaterials
 				initPrice
 			}
 		}
