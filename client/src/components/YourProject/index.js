@@ -10,6 +10,7 @@ const YourProject = () => {
 		variables: { userName: userParam },
 	});
 	const user = data?.loggedUser || {};
+    console.log(user)
 	// redirect to personal profile page if username is the logged-in user's
 	if (Auth.customerLoggedIn() && Auth.getProfile().data.userName === userParam)
 		return <Redirect to="/YourProject" />;

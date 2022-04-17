@@ -24,11 +24,14 @@ const resolvers = {
     },
     // get all user
     user: async () => {
-      return User.find().select("-__v -password");
+      return User.find().select("-__v -password")
+      .populate('projects');
     },
 
     user: async (parent, { userName }) => {
-      return User.findOne({ userName }).select("-__v -password");
+      return User.findOne({ userName })
+      .select("-__v -password")
+      .populate('projects');
     },
     // get all user
     users: async () => {

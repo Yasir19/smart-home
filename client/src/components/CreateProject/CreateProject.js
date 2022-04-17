@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ADD_PROJECT } from "../../utils/mutation";
 import { useMutation } from "@apollo/client";
-import { Redirect} from 'react-router-dom'
 
 function CreateProject () {
     const [projectForm, setProjectForm] = useState({
@@ -74,7 +73,7 @@ function CreateProject () {
                 </button>
             </form>
             {error && <div> please check you offer value </div>}
-            <div><Redirect to ='/YourProject'/></div>
+            {/* <div><Redirect to ='/YourProject'/></div> */}
         </div>
         
         

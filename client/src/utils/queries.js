@@ -23,20 +23,20 @@ export const QUERY_PROJECT = gql`
 	}
 `;
 export const QUERY_CUSTOMER = gql`
-	{
-		loggedUser {
-			_id
-			userName
-			email
-			projects {
-				_id
-				userName
-				projectDescription
-				initPrice
-				projectMaterials
-			}
-		}
+{
+	loggedUser
+	   {
+	  _id
+	  userName
+	  email
+	  projects {
+		initPrice
+		projectDescription
+		projectZipCode
+		projectMaterials
+	  }
 	}
+  }
 `;
 
 export const QUERY_USER = gql`
