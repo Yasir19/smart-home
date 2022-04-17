@@ -1,13 +1,13 @@
 import { gql } from "@apollo/client";
 
 export const QUERY_PROJECTS = gql`
-	query projects($yourName: String) {
-		projects(yourName: $yourName) {
+	query projects($usrName: String) {
+		projects(userName: $userName) {
 			_id
 			projectDescription
 			projectMaterials
 			initPrice
-			yourName
+			userName
 		}
 	}
 `;
@@ -18,7 +18,7 @@ export const QUERY_PROJECT = gql`
 			projectDescription
 			projectMaterials
 			initPrice
-			yourName
+			userName
 		}
 	}
 `;

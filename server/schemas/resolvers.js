@@ -4,8 +4,8 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   // query section
   Query: {
-      projects: async (parent,{yourName}) => {
-          const params = yourName? {yourName}: {}
+      projects: async (parent,{userName}) => {
+          const params = userName? {userName}: {}
           return Createproject.find(params)
       },
       project: async (parent, {_id}) => {
@@ -36,13 +36,6 @@ const resolvers = {
     },
   },
   Mutation: {
-    approveOffer: async(parent,{projectId, newOffer,}, contect ) => {
-      if(context.user){
-        const approvedOffer = await Createproject.findOneAndUpdate(
-          {}
-        )
-      }
-    },
 
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.user){
@@ -64,7 +57,7 @@ const resolvers = {
 
     addProject: async(parent, args, context) => {
       if (context.user) {
-        const project = await Createproject.create({ ...args, yourName: context.user.userName })
+        const project = await Createproject.create({ ...args, userName: context.user.userName })
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $push: {projects: project._id}},

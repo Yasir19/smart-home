@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
-// import CreateProject from "../CreateProject/CreateProject";
-// import YourProject from "../YourProject/index";
+
 
 function Nav(params) {
 	const logout = (e) => {
