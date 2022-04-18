@@ -48,7 +48,7 @@ const resolvers = {
         console.log(context.user)
         const offer = await Createproject.findByIdAndUpdate(
           {_id: projectId},
-          {$push:{offers:{newOffer, ContractorName: context.user.name }}},
+          {$push:{offers:{newOffer, ContractorName: context.user.userName }}},
           {new:true}
         );
         return offer

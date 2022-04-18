@@ -67,7 +67,6 @@ export const QUERY_USER = gql`
 				projectDescription
 				projectMaterials
 				initPrice
-				userName
 			}
 		}
 	}
