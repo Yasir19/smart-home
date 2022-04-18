@@ -21,7 +21,8 @@ const ProjectList = ({ projects, projectDescription }) => {
 								<p>Project Description:{project.projectDescription}</p>
 								<p className="mb-0">
 									Project Materials:{project.projectMaterials}
-								</p>
+								</p>	
+								
 								<p className="mb-0">
 									Project initial Price:{project.initPrice} || click to{" "}
 									{project.offerCount ? "see" : "start"} offers
