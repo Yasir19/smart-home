@@ -42,6 +42,7 @@ export const QUERY_CUSTOMER = gql`
 	  userName
 	  email
 	  projects {
+		  _id
 		initPrice
 		projectDescription
 		projectZipCode

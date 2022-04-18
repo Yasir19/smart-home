@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { APPROVE_OFFER } from "../../utils/mutation";
+;
 
 
 const ApproveOffer = (offers) =>{
