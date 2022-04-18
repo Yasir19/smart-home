@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Auth from '../../utils/auth'
+import OfferForm from '../OfferForm'
+import OfferList from '../OfferList'
 
 const ProjectList = ({ projects, projectDescription }) => {
 	if (!projects.length) {
@@ -22,6 +25,10 @@ const ProjectList = ({ projects, projectDescription }) => {
 									Project initial Price:{project.initPrice} || click to{" "}
 									{project.offerCount ? "see" : "start"} offers
 								</p>
+								<div className="col-12 mb-3">
+									{Auth.LoggedIn() && <OfferForm projectId={project._id} />}
+									<OfferList offers={project.offers} />
+								</div>
 							</Link>
 						</div>
 					</div>
