@@ -8,6 +8,12 @@ export const QUERY_PROJECTS = gql`
 			projectMaterials
 			initPrice
 			userName
+			offers{
+				_id
+				ContractorName
+				newOffer
+
+			}
 		}
 	}
 `;
@@ -19,6 +25,12 @@ export const QUERY_PROJECT = gql`
 			projectMaterials
 			initPrice
 			userName
+			offers{
+				_id
+				ContractorName
+				newOffer
+
+			}
 		}
 	}
 `;
@@ -34,6 +46,10 @@ export const QUERY_CUSTOMER = gql`
 		projectDescription
 		projectZipCode
 		projectMaterials
+		offers {
+		  ContractorName
+		  newOffer
+		}
 	  }
 	}
   }
@@ -47,7 +63,9 @@ export const QUERY_USER = gql`
 			email
 			projects {
 				_id
+				userName
 				projectDescription
+				projectMaterials
 				initPrice
 			}
 		}

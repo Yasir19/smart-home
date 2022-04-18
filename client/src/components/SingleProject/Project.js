@@ -4,9 +4,10 @@ import { QUERY_PROJECT } from '../../utils/queries';
 import {useParams} from 'react-router-dom'
 import Auth from '../../utils/auth'
 import OfferForm from '../OfferForm'
+import OfferList from '../OfferList'
 
 
-const Project = (props) => {
+const Project = () => {
     const {id:projectId} = useParams();
 
     const{loading, data} = useQuery(QUERY_PROJECT,{
@@ -31,9 +32,9 @@ const Project = (props) => {
                 </div>
                 <div className="flex-row justify-space-between">
           <div className="col-12 mb-3">
-            {Auth.contractorLoggedIn()&& <OfferForm projectId={project._id}/>}
+            {Auth.LoggedIn()&& <OfferForm projectId={project._id}/>}
+             <OfferList offers={project.offers}/>
             </div>
-
       </div>
 
             </div>

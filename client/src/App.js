@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { setContext } from "@apollo/client/link/context";
 import Login from "./components/Login/Login";
 import Signup from "./components/SignUp/Signup";
-import Home from "./components/ProjectBoard/Home";
+import Home from "./components/HomePage/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Nav from "./components/Nav";

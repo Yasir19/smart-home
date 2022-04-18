@@ -1,11 +1,12 @@
 const {User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+const { populate } = require("../models/User");
 const resolvers = {
   // query section
   Query: {
       projects: async (parent,{userName}) => {
-          const params = userName? {userName}: {}
+          const params = userName? {userName}: {};
           return Createproject.find(params)
       },
       project: async (parent, {_id}) => {
@@ -17,6 +18,7 @@ const resolvers = {
           _id: context.user._id,
         })
         .select("-__v -password")
+        .populate("projects")
 
         return userData;
       }
@@ -24,7 +26,8 @@ const resolvers = {
     },
     // get all user
     user: async () => {
-      return User.find().select("-__v -password")
+      return User.find()
+      .select("-__v -password")
       .populate('projects');
     },
 
@@ -45,7 +48,7 @@ const resolvers = {
         console.log(context.user)
         const offer = await Createproject.findByIdAndUpdate(
           {_id: projectId},
-          {$push:{offers:{newOffer, ContractorName: context.user.name }}},
+          {$push:{offers:{newOffer, ContractorName: context.user.userName }}},
           {new:true}
         );
         return offer

@@ -37,6 +37,11 @@ const YourProject = () => {
 					<ProjectList projects={user.projects}></ProjectList>
 				</div>
 			</div>
+			<div className="flex-row justify-space-between mb-3">
+				<div className="col-12 mb-3 col-lg mb-3">
+				</div>
+				</div>
+			
 		</div>
 	);
 };
