@@ -33,11 +33,11 @@ class AuthService {
 		//get the role value
 		const role = decodeToken.data.role;
 		// check if this token has a role valye of customer
-		if (role === "contractor") {
+		if (role === "Contractor") {
 			// use type coersion to check if token is NOT undefined and the token is NOT expired
 			return !!token && !this.isTokenExpired(token);
 		} else {
-			window.location.assign("/");
+			<p>Sorry you dont have access</p>
 		}
 	}
 	// check if the token has expired
@@ -64,18 +64,6 @@ class AuthService {
 		localStorage.setItem("id_token", idToken);
 		window.location.assign("/");
 	}
-	//   role() {
-	//     const token = localStorage.getItem("id_token");
-	//     const values = decode(token);
-	//     const role = values.data.role;
-	//     if (role !== "contractor") {
-	//       window.location.assign("/");
-	//     } else {
-	//       const token = this.getToken();
-	//       return !!token && !this.isTokenExpired(token);
-	//     }
-	//   }
-	//clear token from localStorage and force logout with reload
 	logout() {
 		//cleare user token and profile data from localStorage
 		localStorage.removeItem("id_token");

@@ -73,7 +73,6 @@ function CreateProject () {
                 </button>
             </form>
             {error && <div> please check you offer value </div>}
-            {/* <div><Redirect to ='/YourProject'/></div> */}
         </div>
         
         
