@@ -4,13 +4,13 @@ import { useQuery } from "@apollo/client";
 import { QUERY_CUSTOMER } from "../../utils/queries";
 import Auth from "../../utils/auth";
 import ProjectList from "../ProjectList";
-import OfferList from "../OfferList";
 const YourProject = () => {
 	const { userName: userParam } = useParams();
 	const { loading, data } = useQuery(QUERY_CUSTOMER, {
 		variables: { userName: userParam },
 	});
 	const user = data?.loggedUser || {};
+    console.log(user)
 	// redirect to personal profile page if username is the logged-in user's
 	if (Auth.customerLoggedIn() && Auth.getProfile().data.userName === userParam)
 		return <Redirect to="/YourProject" />;
@@ -35,7 +35,6 @@ const YourProject = () => {
 			<div className="flex-row justify-space-between mb-3">
 				<div className="col-12 mb-3 col-lg mb-3">
 					<ProjectList projects={user.projects}></ProjectList>
-					<OfferList offers={user.projects}></OfferList>
 				</div>
 			</div>
 			<div className="flex-row justify-space-between mb-3">
