@@ -17,32 +17,32 @@ function Nav(params) {
 			<nav>
 				<ul className="flex-row">
 					{
-					// Auth.LoggedIn() ? (
-					// 	<>
-					// 		<li className="mx-2">
-					// 			<Link to="/login">Create Project</Link>
-					// 		</li>
-					// 		<li className="mx-2">
-					// 			<a data-testid="join" href="/signup">
-					// 				Become Smarter
-					// 			</a>
-					// 		</li>
-					// 		<li className="mx-2">
-					// 			<Link to="">Contact Us</Link>
-					// 		</li>
-					// 		<li className="mx-2">
-					// 			<a data-testid="login" href="/login">
-					// 				login
-					// 			</a>
-					// 		</li>
+					Auth.LoggedIn() ? (
+						<>
+							<li className="mx-2">
+								<Link to="/login">Create Project</Link>
+							</li>
+							<li className="mx-2">
+								<a data-testid="join" href="/signup">
+									Become Smarter
+								</a>
+							</li>
+							<li className="mx-2">
+								<Link to="">Contact Us</Link>
+							</li>
+							<li className="mx-2">
+								<a data-testid="login" href="/login">
+									login
+								</a>
+							</li>
 
-					// 		<li className="mx-2">
-					// 			<a data-testid="join" href="/signup">
-					// 				Sign Up
-					// 			</a>
-					// 		</li>
-					// 	</>
-					// ) : 
+							<li className="mx-2">
+								<a data-testid="join" href="/signup">
+									Sign Up
+								</a>
+							</li>
+						</>
+					) : 
 					Auth.customerLoggedIn() ? (
 						<>
 							<li className="mx-2">
