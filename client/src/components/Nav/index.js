@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 
-
 function Nav(params) {
 	const logout = (e) => {
 		e.preventDefault();
@@ -23,13 +22,42 @@ function Nav(params) {
 								<Link to="/"> Home</Link>
 							</li>
 							<li className="mx-2">
-								<Link to="/Job"> Job Board</Link>
+								<Link to="/CreateProject">Create Project</Link>
 							</li>
+						</>
+					) : Auth.customerLoggedIn() ? (
+						<>
 							<li className="mx-2">
 								<Link to="/CreateProject">Create Project</Link>
 							</li>
 							<li className="mx-2">
 								<Link to="/YourProject">Your Project</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Account</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Contact Us</Link>
+							</li>
+							<li className="mx-2">
+								<a data-testid="log Out" href="/" onClick={logout}>
+									Log Out
+								</a>
+							</li>
+						</>
+					) : Auth.contractorLoggedIn() ? (
+						<>
+							<li className="mx-2">
+								<Link to="/Job"> Job Board</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Submitted Offers</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Account</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Contact Us</Link>
 							</li>
 							<li className="mx-2">
 								<a data-testid="log Out" href="/" onClick={logout}>
@@ -40,11 +68,14 @@ function Nav(params) {
 					) : (
 						<>
 							<li className="mx-2">
-								<Link to="/CreateProject">Create Project</Link>
+								<Link to="/"> Home</Link>
+							</li>
+							<li className="mx-2">
+								<Link to="">Create Project</Link>
 							</li>
 							<li className="mx-2">
 								<a data-testid="join" href="/signup">
-									Join Smart Team
+									Become Smarter
 								</a>
 							</li>
 							<li className="mx-2">
@@ -60,7 +91,6 @@ function Nav(params) {
 							</li>
 						</>
 					)}
-
 					<li className="mx-2"></li>
 				</ul>
 			</nav>

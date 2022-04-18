@@ -5,7 +5,7 @@ const Services = () => {
 		<section className="">
 			<h2>Our Services</h2>
 			<div className="card" style={{ width: "18rem" }}>
-				<img src="../../assets/immages/" alt="" />
+				<img src="" alt="" />
 				<h4 className="card-title">Energy Management</h4>
 				<p className="card-text">
 					Some quick example text to build on the card title and make up the
