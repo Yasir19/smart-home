@@ -1,7 +1,6 @@
 const {User, Createproject } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-const { populate } = require("../models/User");
 const resolvers = {
   // query section
   Query: {
@@ -42,7 +41,14 @@ const resolvers = {
     },
   },
   Mutation: {
+    approveOffer: async (parent, {projectId,newOffer }) => {
+      return await Createproject.findByIdAndUpdate(
+        {_id:projectId},
+        {initPrice: newOffer},
+        {new:true}
+      )
 
+    },
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.user){
         console.log(context.user)

@@ -22,7 +22,7 @@ const Project = () => {
             <div className='card mb-3'>
                 <p className='card-header'>
                     <span style={{ fontWeight:500}} className="text-light">
-                        Project Owner: {project.YourName}
+                        Project Owner: {project.userName}
                     </span>
                 </p>
                 <div className='card-body'>
@@ -32,8 +32,9 @@ const Project = () => {
                 </div>
                 <div className="flex-row justify-space-between">
           <div className="col-12 mb-3">
-            {Auth.LoggedIn()&& <OfferForm projectId={project._id}/>}
-             <OfferList offers={project.offers}/>
+            {Auth.contractorLoggedIn() ? <OfferForm projectId={project._id}/> :
+            Auth.customerLoggedIn() ? <OfferList offers={project.offers}/>
+         :null}
             </div>
       </div>
 

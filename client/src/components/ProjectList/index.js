@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Auth from '../../utils/auth'
 import OfferForm from '../OfferForm'
 import OfferList from '../OfferList'
+import ApproveOffer from "../ApproveOffer";
 
 const ProjectList = ({ projects, projectDescription }) => {
 	if (!projects.length) {
@@ -25,11 +26,12 @@ const ProjectList = ({ projects, projectDescription }) => {
 									Project initial Price:{project.initPrice} || click to{" "}
 									{project.offerCount ? "see" : "start"} offers
 								</p>
+								</Link>
 								<div className="col-12 mb-3">
-									{Auth.LoggedIn() && <OfferForm projectId={project._id} />}
-									<OfferList offers={project.offers} />
+									{Auth.contractorLoggedIn() ? <OfferForm projectId={project._id} />
+									: Auth.customerLoggedIn ? <OfferList offers={project.offers} /> : null}
 								</div>
-							</Link>
+						
 						</div>
 					</div>
 				))}
