@@ -4,8 +4,8 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   // query section
   Query: {
-      projects: async (parent,{yourName}) => {
-          const params = yourName? {yourName}: {}
+      projects: async (parent,{userName}) => {
+          const params = userName? {userName}: {};
           return Createproject.find(params)
       },
       project: async (parent, {_id}) => {
@@ -17,6 +17,7 @@ const resolvers = {
           _id: context.user._id,
         })
         .select("-__v -password")
+        .populate("projects")
 
         return userData;
       }
@@ -24,11 +25,15 @@ const resolvers = {
     },
     // get all user
     user: async () => {
-      return User.find().select("-__v -password");
+      return User.find()
+      .select("-__v -password")
+      .populate('projects');
     },
 
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).select("-__v -password");
+    user: async (parent, { userName }) => {
+      return User.findOne({ userName })
+      .select("-__v -password")
+      .populate('projects');
     },
     // get all user
     users: async () => {
@@ -36,12 +41,20 @@ const resolvers = {
     },
   },
   Mutation: {
+    approveOffer: async (parent, {projectId,newOffer }) => {
+      return await Createproject.findByIdAndUpdate(
+        {_id:projectId},
+        {initPrice: newOffer},
+        {new:true}
+      )
+
+    },
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.user){
         console.log(context.user)
         const offer = await Createproject.findByIdAndUpdate(
           {_id: projectId},
-          {$push:{offers:{newOffer, ContractorName: context.user.name }}},
+          {$push:{offers:{newOffer, ContractorName: context.user.userName }}},
           {new:true}
         );
         return offer
@@ -56,7 +69,7 @@ const resolvers = {
 
     addProject: async(parent, args, context) => {
       if (context.user) {
-        const project = await Createproject.create({ ...args, yourName: context.user.userName })
+        const project = await Createproject.create({ ...args, userName: context.user.userName })
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $push: {projects: project._id}},

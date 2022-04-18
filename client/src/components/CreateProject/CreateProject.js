@@ -26,7 +26,8 @@ function CreateProject () {
             await addProject({
                 variables: { ...projectForm }
             })
-            setProjectForm('')
+            window.location.reload()
+
         } catch (err) {
             console.log(err)
         }
@@ -73,7 +74,10 @@ function CreateProject () {
             </form>
             {error && <div> please check you offer value </div>}
         </div>
+        
+        
     )
+    
 }
 
 export default CreateProject;

@@ -73,7 +73,18 @@ export const ADD_PROJECT = gql`
       initPrice
       projectDescription
       projectMaterials
-      yourName
+      userName
+    }
+  }
+`;
+export const APPROVE_OFFER = gql`
+  mutation approveOffer($projectId: ID!, $newOffer: String!) {
+    approveOffer(projectId: $projectId, newOffer: $newOffer) {
+      projectDescription
+      initPrice
+      offers {
+        ContractorName
+      }
     }
   }
 `;

@@ -50,7 +50,14 @@ const UserSchema = new Schema({
 		required: true,
 		enum: ['Customer','Contractor'],
 		default:'Customer'
-	}
+	},
+	projects: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: 'Createproject'
+		}
+	  ],
+
 });
 UserSchema.pre('save', async function(next){
     if(this.isNew || this.isModified('password')){
