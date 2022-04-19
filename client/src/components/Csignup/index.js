@@ -3,7 +3,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutation";
 import Auth from "../../utils/auth";
 
-const Signup = () => {
+const Csignup = () => {
   const [formState, setFormState] = useState({
     userName: "",
     firstName: "",
@@ -12,7 +12,7 @@ const Signup = () => {
     password: "",
     address: "",
     phoneNumber: "",
-    role: "Customer",
+    role: "Contractor",
     typeOfServices: "",
     serviceZipcode: "",
   });
@@ -113,15 +113,6 @@ const Signup = () => {
                 value={formState.address}
                 onChange={handleChange}
               />
-              {/* <input
-                className="form-input"
-                placeholder="Role"
-                name="role"
-                type="text"
-                id="role"
-                value={formState.role}
-                onChange={handleChange}
-                />
               <input
                 className="form-input"
                 placeholder="Services"
@@ -139,7 +130,7 @@ const Signup = () => {
                 id="serviceZipcode"
                 value={formState.serviceZipcode}
                 onChange={handleChange}
-              /> */}
+              />
               <button className="btn d-block w-100" type="submit">
                 Submit
               </button>
@@ -151,4 +142,4 @@ const Signup = () => {
     </main>
   );
 };
-export default Signup;
+export default Csignup;
