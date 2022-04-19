@@ -71,9 +71,26 @@ header nav ul li {
   width: 25vw;
 }
 
-/* MAIN STYLES */
+/* MAIN | HomePage Home.js */
 main {
   margin: 10px 0;
+}
+
+/* MAIN | landingPage index.js */
+.primary-text {
+  font-size: 3vh;
+}
+
+.highligted-text {
+  /* font-weight: bolder; */
+  transition-duration: 2s;
+}
+
+.highligted-text:hover {
+  font-size: 3.5vh;
+  color: var(--secondary);
+  text-shadow: 2px 2px 15px var(--tertiary);
+
 }
 
 /* MAIN Clogin.js STYLES */
