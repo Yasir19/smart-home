@@ -6,11 +6,11 @@ const ApprovedList = ({ projects, projectDescription }) => {
 		return <h3> No Available Projects Yet </h3>;
 	}
 	return (
-		<div>
+		<div className="apporved-list my-5">
 			<h3> {projectDescription}</h3>
 			{projects &&
 				projects.map((project) => (
-					<div key={project._id} className="card mb-3">
+					<div key={project._id} className="card-approved-list mb-3">
 						<div className="card-body">
 								<p className="mb-0">Project Owner:{project.userName}</p>
 								<p>Project Description:{project.projectDescription}</p>
