@@ -11,7 +11,7 @@ const MostPopular = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card's content.
 				</p>
-				<button className="btn d-block w-100">Create Project</button>
+				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
 
 			<div className="card" style={{ width: "18rem" }}>
@@ -21,7 +21,7 @@ const MostPopular = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card's content.
 				</p>
-				<button className="btn d-block w-100">Create Project</button>
+				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
 
 			<div className="card" style={{ width: "18rem" }}>
@@ -31,7 +31,7 @@ const MostPopular = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card's content.
 				</p>
-				<button className="btn d-block w-100">Create Project</button>
+				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="" alt="" />
@@ -40,7 +40,7 @@ const MostPopular = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card's content.
 				</p>
-				<button className="btn d-block w-100">Create Project</button>
+				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
 
 			<div className="card" style={{ width: "18rem" }}>
@@ -50,7 +50,7 @@ const MostPopular = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card's content.
 				</p>
-				<button className="btn d-block w-100">Create Project</button>
+				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
 		</section>
 	);
