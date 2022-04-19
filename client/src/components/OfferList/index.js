@@ -3,22 +3,18 @@ import { useMutation } from "@apollo/client";
 import { APPROVE_OFFER } from "../../utils/mutation";
 
 const OfferList = ({ offers, projectId }) => {
-  const [isOffer, setIsOffer] = useState({newOffer:""});
+  const [newOffer, setIsOffer] = useState("");
   const [approveOffer, { error }] = useMutation(APPROVE_OFFER);
 
   const handleChange = (e) => {
-    const {name,value} = e.target
-    setIsOffer({
-      ...isOffer,
-      [name]:value,
-    })
+    setIsOffer(e.target.value)
   };
-  console.log(isOffer)
+  console.log(newOffer)
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       await approveOffer({
-        variables: { isOffer, projectId },
+        variables: { newOffer, projectId },
       });
     } catch (err) {
       console.log(err);
@@ -38,7 +34,7 @@ const OfferList = ({ offers, projectId }) => {
                 className="flex-row justify-center justify-space-between-md align-stretch"
                 onSubmit={handleFormSubmit}
               >
-                <button name={offer.newOffer+1} value={offer.newOffer} onChange={handleChange}>
+                <button name={offer.ContractorName} value={offer.newOffer} onClick={handleChange}>
                   The Offer Value:{offer.newOffer}{" "}
                 </button>
               </form>
