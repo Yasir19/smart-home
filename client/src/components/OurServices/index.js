@@ -5,6 +5,7 @@ const Services = () => {
 	return (
 		<section className="">
 			<h2>Our Services</h2>
+			<article className="card-container">
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="" alt="" />
 				<h4 className="card-title"></h4>
@@ -38,6 +39,7 @@ const Services = () => {
 				<img src="https://img.freepik.com/free-vector/isometric-smart-home-technology-interface-smartphone-app-screen-with-augmented-reality-ar-view_122058-956.jpg?w=740" alt="Home Security"></img>
 				{/* <button className="btn d-block w-100">Create Project</button> */}
 			</div>
+			</article>
 		</section>
 	);
 };

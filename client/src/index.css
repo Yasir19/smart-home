@@ -34,6 +34,29 @@ a:hover {
   border-left: 1px solid var(--tertiary);
 }
 
+/* BUTTON STYLES */
+.btn {
+  color: var(--secondary);
+  border-radius: 15px;
+  background-color: var(--fourth);
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px var(--secondary);
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  box-shadow: 2px 2px 15px var(--tertiary);
+}
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 /* BODY STYLES */
 body {
   display: flex;
@@ -71,10 +94,72 @@ header nav ul li {
   width: 25vw;
 }
 
-/* MAIN STYLES */
+/* MAIN | HomePage Home.js */
 main {
   margin: 10px 0;
 }
+
+/* SECTION | landingPage index.js */
+.primary-text {
+  font-size: 4vh;
+}
+
+.primary-text h1 {
+  font-size: 3.5vh;
+}
+
+.highligted-text {
+  /* font-weight: bolder; */
+  transition-duration: 2s;
+}
+
+.highligted-text:hover {
+  font-size: 4.5vh;
+  color: var(--secondary);
+  text-shadow: 2px 2px 15px var(--tertiary);
+}
+
+/* SECTION | OurServices & MostPopular */
+h2 {
+  font-size: 3vh;;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.card {
+  width: 25%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: .75;
+  transition: 1s;
+}
+
+.card:hover {
+  opacity: 1;
+  box-shadow: 5px 5px 20px var(--tertiary);
+}
+
+.card-title {
+  font-size: 125%;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.w-100 {
+  width: 100%;
+  margin: 15px 0;
+}
+
 
 /* MAIN Clogin.js STYLES */
 .card-header {
@@ -103,21 +188,4 @@ main {
 .form-input:focus::placeholder {
   color: var(--tertiary);
   font-variant: small-caps;
-}
-
-.btn {
-  color: var(--secondary);
-  border-radius: 15px;
-  background-color: var(--fourth);
-  padding: 15px;
-  border: none;
-  box-shadow: 2px 2px 15px var(--secondary);
-  font-weight: bold;
-  transition-duration: 1s;
-}
-
-.btn:hover {
-  color: var(--primary);
-  background-color: var(--tertiary);
-  box-shadow: 2px 2px 15px var(--tertiary);
 }
