@@ -78,7 +78,11 @@ main {
 
 /* MAIN | landingPage index.js */
 .primary-text {
-  font-size: 3vh;
+  font-size: 4vh;
+}
+
+.primary-text h1 {
+  font-size: 3.5vh;
 }
 
 .highligted-text {
@@ -87,10 +91,27 @@ main {
 }
 
 .highligted-text:hover {
-  font-size: 3.5vh;
+  font-size: 4.5vh;
   color: var(--secondary);
   text-shadow: 2px 2px 15px var(--tertiary);
+}
 
+/* MAIN | OurServices index.js */
+h2 {
+  font-size: 3vh;;
+}
+
+.card {
+  width: 20%;
+  margin: 10px;
+  border-radius: 15px;
+  opacity: .75;
+  transition: 1s;
+}
+
+.card:hover {
+  opacity: 1;
+  box-shadow: 5px 5px 20px var(--tertiary);
 }
 
 /* MAIN Clogin.js STYLES */
