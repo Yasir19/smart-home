@@ -52,6 +52,11 @@ a:hover {
   box-shadow: 2px 2px 15px var(--tertiary);
 }
 
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 /* BODY STYLES */
 body {
   display: flex;
@@ -94,7 +99,7 @@ main {
   margin: 10px 0;
 }
 
-/* MAIN | landingPage index.js */
+/* SECTION | landingPage index.js */
 .primary-text {
   font-size: 4vh;
 }
@@ -114,20 +119,21 @@ main {
   text-shadow: 2px 2px 15px var(--tertiary);
 }
 
-/* MAIN | OurServices index.js */
+/* SECTION | OurServices & MostPopular */
 h2 {
   font-size: 3vh;;
 }
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   font-size: 1vw;
   text-align: center;
 }
 
 .card {
-  width: 20%;
+  width: 25%;
   margin: 10px;
   padding: 10px;
   border-radius: 15px;
@@ -153,6 +159,7 @@ h2 {
   width: 100%;
   margin: 15px 0;
 }
+
 
 /* MAIN Clogin.js STYLES */
 .card-header {
