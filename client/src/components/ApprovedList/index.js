@@ -12,7 +12,6 @@ const ApprovedList = ({ projects, projectDescription }) => {
 				projects.map((project) => (
 					<div key={project._id} className="card mb-3">
 						<div className="card-body">
-							<Link to={`project/${project._id}`}>
 								<p className="mb-0">Project Owner:{project.userName}</p>
 								<p>Project Description:{project.projectDescription}</p>
 								<p className="mb-0">
@@ -21,7 +20,7 @@ const ApprovedList = ({ projects, projectDescription }) => {
 								<p className="mb-0">
 									Project initial Price:{project.initPrice}
 								</p>
-								</Link>
+							
 						</div>
 					</div>
 				))}

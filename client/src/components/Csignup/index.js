@@ -16,6 +16,9 @@ const Csignup = () => {
     typeOfServices: "",
     serviceZipcode: "",
   });
+  const [errorMessage, setErrorMessage] = useState('');
+  
+  
   const [addUser, { error }] = useMutation(ADD_USER);
   // update state based on form input changes
   const handleChange = (event) => {
@@ -26,7 +29,6 @@ const Csignup = () => {
       [name]: value,
     });
   };
-
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
