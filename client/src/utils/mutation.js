@@ -78,13 +78,16 @@ export const ADD_PROJECT = gql`
   }
 `;
 export const APPROVE_OFFER = gql`
-  mutation approveOffer($projectId: ID!, $newOffer: String!) {
-    approveOffer(projectId: $projectId, newOffer: $newOffer) {
-      projectDescription
-      initPrice
-      offers {
-        ContractorName
-      }
+mutation approveOffer($projectId: ID!, $newOffer: String!, $contractorName: String!) {
+  approveOffer(projectId: $projectId, newOffer: $newOffer, contractorName: $contractorName) {
+        _id
+    userName
+    projectDescription
+    projectMaterials
+    initPrice
+    offers {
+      newOffer
     }
   }
+}
 `;

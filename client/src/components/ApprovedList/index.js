@@ -1,13 +1,31 @@
 import React from "react";
-import ProjectList from '../OfferList'
-import Auth from "../../utils/auth";
-const ApprovedList = ({project,ContractorName,projectId}) =>{
-    return(
-        <div className="flex-row justify-space-between mb-3">
-        <div className="col-12 mb-3 col-lg mb-3">
-            {Auth.LoggedIn() && <ProjectList projects={project } ></ProjectList>}
-        </div>
-    </div>
-    )
-}
-export default ApprovedList
+import { Link } from "react-router-dom";
+
+const ApprovedList = ({ projects, projectDescription }) => {
+	if (!projects.length) {
+		return <h3> No Available Projects Yet </h3>;
+	}
+	return (
+		<div>
+			<h3> {projectDescription}</h3>
+			{projects &&
+				projects.map((project) => (
+					<div key={project._id} className="card mb-3">
+						<div className="card-body">
+							<Link to={`project/${project._id}`}>
+								<p className="mb-0">Project Owner:{project.userName}</p>
+								<p>Project Description:{project.projectDescription}</p>
+								<p className="mb-0">
+									Project Materials:{project.projectMaterials}
+								</p>	
+								<p className="mb-0">
+									Project initial Price:{project.initPrice}
+								</p>
+								</Link>
+						</div>
+					</div>
+				))}
+		</div>
+	);
+};
+export default ApprovedList;
