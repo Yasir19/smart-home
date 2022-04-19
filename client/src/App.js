@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { setContext } from "@apollo/client/link/context";
 import Login from "./components/Login/Login";
 import Signup from "./components/SignUp/Signup";
+import Csignup from "./components/Csignup";
 import Home from "./components/HomePage/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from "./components/NoMatch/NoMatch";
@@ -16,6 +17,7 @@ import Nav from "./components/Nav";
 import YourProject from "./components/YourProject/index";
 import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
+import ApprovedJob from './components/ApprovedJob/index'
 
 
 const HttpLink = createHttpLink({
@@ -48,7 +50,9 @@ function App() {
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/YourProject/:userName?" component={YourProject} />
+						<Route exact path='/ApprovedJob/:userName?' component={ApprovedJob}/>
 						<Route exact path="/signup" component={Signup} />
+						<Route exact path="/Smarter" component={Csignup} />
 						<Route exact path="/project/:id" component={Project} />
 						<Route exact path="/CreateProject" component={CreateProject} />
 						<Route exact path="/Job" component={Job} />

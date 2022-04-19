@@ -44,7 +44,7 @@ function Nav(params) {
 										<Link to="/Job"> Job Board</Link>
 									</li>
 									<li className="mx-2">
-										<Link to="">Submitted Offers</Link>
+										<Link to="/ApprovedJob">Submitted Offers</Link>
 									</li>
 									<li className="mx-2">
 										<Link to="">Account</Link>
@@ -66,7 +66,7 @@ function Nav(params) {
 								<Link to="login">Create Project</Link>
 							</li>
 							<li className="mx-2">
-								<a data-testid="join" href="/signup">
+								<a data-testid="join" href="/Smarter">
 									Become Smarter
 								</a>
 							</li>

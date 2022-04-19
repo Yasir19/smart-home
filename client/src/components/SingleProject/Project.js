@@ -33,7 +33,7 @@ const Project = () => {
                 <div className="flex-row justify-space-between">
           <div className="col-12 mb-3">
             {Auth.contractorLoggedIn() ? <OfferForm projectId={project._id}/> :
-            Auth.customerLoggedIn() ? <OfferList offers={project.offers} project={project._id} />
+            Auth.customerLoggedIn() ? <OfferList offers={project.offers} projectId={project._id} />
     
          :null}
             </div>

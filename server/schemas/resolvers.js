@@ -41,14 +41,19 @@ const resolvers = {
     },
   },
   Mutation: {
-    approveOffer: async (parent, {projectId,newOffer }) => {
-      return await Createproject.findByIdAndUpdate(
+    approveOffer: async (parent, {projectId,newOffer,contractorName }) => {
+      const offer = await Createproject.findByIdAndUpdate(
         {_id:projectId},
-        {initPrice: newOffer},
-        {new:true}
-      )
-
+        {initPrice:newOffer})
+       await User.findOneAndUpdate(
+        {userName:contractorName},
+        {$push:{projects: projectId}},
+        {new:true})
+        
+       
+      return offer
     },
+    
     addOffer:async (parent, {projectId, newOffer}, context ) => {
       if(context.user){
         console.log(context.user)
