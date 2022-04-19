@@ -101,6 +101,13 @@ h2 {
   font-size: 3vh;;
 }
 
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1vw;
+  text-align: center;
+}
+
 .card {
   width: 20%;
   margin: 10px;
@@ -112,6 +119,10 @@ h2 {
 .card:hover {
   opacity: 1;
   box-shadow: 5px 5px 20px var(--tertiary);
+}
+
+.card-title {
+  font-size: 125%;
 }
 
 /* MAIN Clogin.js STYLES */

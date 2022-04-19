@@ -4,6 +4,7 @@ const Services = () => {
 	return (
 		<section className="">
 			<h2>Our Services</h2>
+			<article className="card-container">
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="" alt="" />
 				<h4 className="card-title">Energy Management</h4>
@@ -31,6 +32,7 @@ const Services = () => {
 				</p>
 				<button className="btn d-block w-100">Create Project</button>
 			</div>
+			</article>
 		</section>
 	);
 };
