@@ -10,13 +10,11 @@ const UserSchema = new Schema({
 	},
 	firstName: {
 		type: String,
-		unique: true,
 		required: [true, "firstname is required"],
 		trim: true,
 	},
 	lastName: {
 		type: String,
-		unique: true,
 		required: [true, "lastname is required"],
 		trim: true,
 	},
@@ -38,20 +36,28 @@ const UserSchema = new Schema({
 		minlength: 9,
 	},
 	phoneNumber: {
-		type: String,
-		required: [true, "phone number is required"],
-		unique: true,
-		validate: {
-			validator: function (v) {
-				return /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/.test(v);
-			},
-			message: (props) => `${props.value} is not a valid phone number`,
-		},
+		type:String,
+		required:true,
+		match:[ /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'must match a phone number']
 	},
 	address: {
 		type:String,
-		required:true
+		required:true,
+
 	},
+	role: {
+		type: String,
+		required: true,
+		enum: ['Customer','Contractor'],
+		default:'Customer'
+	},
+	projects: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: 'Createproject'
+		}
+	  ],
+
 });
 UserSchema.pre('save', async function(next){
     if(this.isNew || this.isModified('password')){

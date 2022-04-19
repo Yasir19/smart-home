@@ -1,17 +1,6 @@
 // import the gql template function
 const { gql } = require("apollo-server-express");
 const typeDefs = gql`
-type Contractor {
-    _id:ID
-    name:String
-    email:String
-    typeOfServices:String
-    serviceZipcode:String
-    cert:String
-    bio:String
-    photo:String
-    phoneNumber:String
-}
 type User {
     _id:ID
     userName:String
@@ -21,12 +10,18 @@ type User {
     password:String
     phoneNumber:String
     address:String
+    role:String
+    typeOfServices:String
+    serviceZipcode:String
+    projects:[Projects]
+    
 }
 type Projects {
     _id:ID
     projectDescription:String
     projectMaterials:String
-    yourName:String
+    projectZipCode:String
+    userName:String
     initPrice:String
     offers:[Offer]
 }
@@ -37,25 +32,22 @@ type Offer{
     createdAt:String
 }
 type Query {
-loggedContractor : Contractor
 loggedUser : User
 users:[User]
-user(name:String!): User
-contractors:[Contractor]
-contractor(name:String!): Contractor
-projects(yourName: String): [Projects]
+user(userName:String!): User
+projects(userName: String): [Projects]
 project(_id: ID!): Projects
 }
 type Mutation {
     login (email:String!, password: String!): Auth
-    ulogin (email:String!, password: String!): Auth
-    addContractor(name:String!,email:String!, password:String!,typeOfServices:String!,address:String!,driverLicense:String!,cert:String,serviceZipcode:String!, bio:String,photo:String,phoneNumber:String!): Auth
-    addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!): Auth
+    addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!,role:String,typeOfServices:String,serviceZipcode:String ): Auth
     addOffer(projectId: ID!,newOffer:String! ):Projects
+    addProject(projectDescription:String!, projectMaterials:String!, projectZipCode:String!, initPrice:String!):Projects
+    approveOffer(projectId: ID!,newOffer:String!): Projects
+    
 }
 type Auth {
     token: ID!
-    contractor: Contractor
     user: User
 }
 `;
