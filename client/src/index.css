@@ -34,6 +34,24 @@ a:hover {
   border-left: 1px solid var(--tertiary);
 }
 
+/* BUTTON STYLES */
+.btn {
+  color: var(--secondary);
+  border-radius: 15px;
+  background-color: var(--fourth);
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px var(--secondary);
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  box-shadow: 2px 2px 15px var(--tertiary);
+}
+
 /* BODY STYLES */
 body {
   display: flex;
@@ -111,6 +129,7 @@ h2 {
 .card {
   width: 20%;
   margin: 10px;
+  padding: 10px;
   border-radius: 15px;
   opacity: .75;
   transition: 1s;
@@ -123,6 +142,16 @@ h2 {
 
 .card-title {
   font-size: 125%;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.w-100 {
+  width: 100%;
+  margin: 15px 0;
 }
 
 /* MAIN Clogin.js STYLES */
@@ -152,21 +181,4 @@ h2 {
 .form-input:focus::placeholder {
   color: var(--tertiary);
   font-variant: small-caps;
-}
-
-.btn {
-  color: var(--secondary);
-  border-radius: 15px;
-  background-color: var(--fourth);
-  padding: 15px;
-  border: none;
-  box-shadow: 2px 2px 15px var(--secondary);
-  font-weight: bold;
-  transition-duration: 1s;
-}
-
-.btn:hover {
-  color: var(--primary);
-  background-color: var(--tertiary);
-  box-shadow: 2px 2px 15px var(--tertiary);
 }
