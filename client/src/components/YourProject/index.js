@@ -10,7 +10,7 @@ const YourProject = () => {
 		variables: { userName: userParam },
 	});
 	const user = data?.loggedUser || {};
-    console.log(user)
+	console.log(user);
 	// redirect to personal profile page if username is the logged-in user's
 	if (Auth.customerLoggedIn() && Auth.getProfile().data.userName === userParam)
 		return <Redirect to="/YourProject" />;
@@ -27,21 +27,23 @@ const YourProject = () => {
 	}
 	return (
 		<div>
-			<div className="flex-row mb-3">
-				<h2 className="bg-dark text-secondary p-3 display-inline-block">
-					Your Project Offer Page
-				</h2>
-			</div>
-			<div className="flex-row justify-space-between mb-3">
-				<div className="col-12 mb-3 col-lg mb-3">
-					{Auth.customerLoggedIn() && <ProjectList projects={user.projects} ></ProjectList>}
+			<main>
+				<div className="flex-row mb-3">
+					<h2 className="bg-dark text-secondary p-3 display-inline-block">
+						Your Project Offer Page
+					</h2>
 				</div>
-			</div>
-			<div className="flex-row justify-space-between mb-3">
-				<div className="col-12 mb-3 col-lg mb-3">
+				<div className="flex-row justify-space-between mb-3">
+					<div className="col-12 mb-3 col-lg mb-3">
+						{Auth.customerLoggedIn() && (
+							<ProjectList projects={user.projects}></ProjectList>
+						)}
+					</div>
 				</div>
+				<div className="flex-row justify-space-between mb-3">
+					<div className="col-12 mb-3 col-lg mb-3"></div>
 				</div>
-			
+			</main>
 		</div>
 	);
 };

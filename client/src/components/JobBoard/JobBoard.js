@@ -8,7 +8,7 @@ const Job = () => {
 	return (
 		<main>
 			<div className="flex-row justify-space-between">
-				<div className="col-12 mb-3">
+				<div className="card-container col-12 mb-3">
 					{loading ? (
 						<div>loading...</div>
 					) : (

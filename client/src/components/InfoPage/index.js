@@ -4,12 +4,10 @@ import ImgHero from "../../assets/images/hero.jpeg";
 const InfoPage = () => {
 	return (
 		<section className="my-5">
-			<div className="card" style={{ width: "18rem" }}>
+			<div className="" style={{ width: "100%", height: "" }}>
 				<img
 					src={ImgHero}
 					alt="Graph of Energy saving habits."
-					// width={180}
-					// height={180}
 				></img>
 			</div>
 		</section>
