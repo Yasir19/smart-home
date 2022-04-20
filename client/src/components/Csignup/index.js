@@ -16,7 +16,6 @@ const Csignup = () => {
     typeOfServices: "",
     serviceZipcode: "",
   });
-  const [errorMessage, setErrorMessage] = useState('');
   
   
   const [addUser, { error }] = useMutation(ADD_USER);

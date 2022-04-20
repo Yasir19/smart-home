@@ -12,7 +12,7 @@ const ApprovedJob = () =>{
 	const user = data?.loggedUser || {};
     console.log(user)
 	// redirect to personal profile page if username is the logged-in user's
-	if (Auth.customerLoggedIn() && Auth.getProfile().data.userName === userParam)
+	if (Auth.contractorLoggedIn() && Auth.getProfile().data.userName === userParam)
 		return <Redirect to="/YourProject" />;
 	if (loading) {
 		return <div> loading ... </div>;
