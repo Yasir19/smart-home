@@ -29,7 +29,7 @@ const YourProject = () => {
 		<div>
 			<div className="flex-row mb-3">
 				<h2 className="bg-dark text-secondary p-3 display-inline-block">
-					Viewing the job offers
+					Your Project Offer Page
 				</h2>
 			</div>
 			<div className="flex-row justify-space-between mb-3">
