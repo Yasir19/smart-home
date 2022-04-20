@@ -1,57 +1,68 @@
 import React from "react";
 
+import ImgSecurity from "../../assets/images/Security.webp";
+import css from "./mostpopular.css";
+
 const MostPopular = () => {
 	return (
 		<section className="my-5">
-			<h2>Popular Installation</h2>
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="" alt="" />
-				<h4 className="card-title">WiFi Optimizer</h4>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the
-					bulk of the card's content.
-				</p>
-				{/* <button className="btn d-block w-100">Create Project</button> */}
-			</div>
-
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="" alt="" />
-				<h4 className="card-title">Smart Light</h4>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the
-					bulk of the card's content.
-				</p>
-				{/* <button className="btn d-block w-100">Create Project</button> */}
-			</div>
-
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="" alt="" />
-				<h4 className="card-title">Smart Theater</h4>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the
-					bulk of the card's content.
-				</p>
-				{/* <button className="btn d-block w-100">Create Project</button> */}
-			</div>
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="" alt="" />
-				<h4 className="card-title">Smart Garage</h4>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the
-					bulk of the card's content.
-				</p>
-				{/* <button className="btn d-block w-100">Create Project</button> */}
-			</div>
-
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="" alt="" />
-				<h4 className="card-title">Home Security</h4>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the
-					bulk of the card's content.
-				</p>
-				{/* <button className="btn d-block w-100">Create Project</button> */}
-			</div>
+			<h2>Most Popular Projects</h2>
+			<article className="card-container most-popular">
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>
+					<h4 className="card-title">Wifi Optimizer</h4>
+				</div>
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>{" "}
+					<h4 className="card-title">Smart Light Installiton</h4>
+				</div>
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>
+					<h4 className="card-title">Mobile Cell-Phone Repair</h4>
+				</div>
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>
+					<h4 className="card-title">Home Thiater and Tv</h4>
+				</div>
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>
+					<h4 className="card-title">Smart Door Lock </h4>
+				</div>
+				<div className="card" style={{ width: "18rem" }}>
+					<img
+						src={ImgSecurity}
+						alt="Graph of Energy saving habits."
+						width={180}
+						height={180}
+					></img>
+					<h4 className="card-title">Home Security</h4>
+				</div>
+			</article>
 		</section>
 	);
 };

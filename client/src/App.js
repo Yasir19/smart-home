@@ -14,6 +14,9 @@ import Home from "./components/HomePage/Home";
 import Project from "./components/SingleProject/Project";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Nav from "./components/Nav";
+import EnergyManagement from "./components/EnergyManagement";
+import LifeStyleSupport from "./components/LifeStyleSupport";
+import HomeSecurity from "./components/HomeSecurity";
 import YourProject from "./components/YourProject/index";
 import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
@@ -60,6 +63,9 @@ function App() {
 						<Route exact path="/Job" component={Job} />
 						<Route exact path="/ContactUs" component={ContactUs} />
 						<Route exact path="/Account" component={Account} />
+						<Route exact path="/EnergyManagement" component={EnergyManagement} />
+						<Route exact path="/LifeStyleSupport" component={LifeStyleSupport} />
+						<Route exact path="/HomeSecurity" component={HomeSecurity} />
 						<Route component={NoMatch} />
 					</Switch>
 				</div>

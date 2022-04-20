@@ -14,7 +14,8 @@ const Account = () => {
             
             <p>UserName: {user.userName}</p>
             <p>Email: {user.email}</p>
-            {/* <p>Last Name: {user.}</p> */}
+            <p>First Name: {user.firstName}</p>
+            <p>Last Name: {user.lastName}</p>
         </div>
     )
 }
