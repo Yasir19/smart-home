@@ -200,7 +200,7 @@ main {
   background-color: var(--primary);
   color: var(--tertiary);
   border-radius: 15px;
-  width: 90vw;
+  /* width: 90vw; */
 }
 
 .card-approved-list {

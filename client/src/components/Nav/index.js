@@ -27,7 +27,7 @@ function Nav(params) {
 										<Link to="/YourProject">Your Project</Link>
 									</li>
 									<li className="mx-2">
-										<Link to="">Account</Link>
+										<Link to="/Account">Account</Link>
 									</li>
 									<li className="mx-2">
 										<Link to="">Contact Us</Link>
@@ -47,7 +47,7 @@ function Nav(params) {
 										<Link to="/ApprovedJob">Submitted Offers</Link>
 									</li>
 									<li className="mx-2">
-										<Link to="">Account</Link>
+										<Link to="/Account">Account</Link>
 									</li>
 									<li className="mx-2">
 										<Link to="">Contact Us</Link>
