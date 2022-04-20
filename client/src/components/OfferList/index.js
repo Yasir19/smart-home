@@ -41,20 +41,28 @@ const OfferList = ({ offers, projectId }) => {
                 className="flex-row justify-center justify-space-between-md align-stretch"
                 onSubmit={handleFormSubmit}
               >
-                <p
-                  className="card-body"
-                  name="contractorName"
-                  value={offer.ContractorName}
-                  onClick={handleChange}
-                >
-                  Offer By:{offer.ContractorName}
-                </p>
-                <button
-                  name="newOffer"
-                  value={offer.newOffer}
-                  onClick={handleChange}
-                >
-                  The Offer Value:{offer.newOffer}{" "}
+                <label >
+                  <h3>Offer By:</h3>
+                  <input
+                value={offer.ContractorName}
+                // onLoadCapture={handleChange}
+                name= "contractorName"
+                className="form-input col-12 col-md-9"
+                ></input>
+                <br />
+                <h3>
+                Offer Price
+                </h3>
+                <input
+                value={offer.newOffer}
+                // onLoadCapture={handleChange}
+                name= "newOffer"
+                className="form-input col-12 col-md-9"
+                ></input>
+                </label>
+                <br />
+                <button className="btn" type="submit">
+                Approve Offer
                 </button>
               </form>
             </div>
