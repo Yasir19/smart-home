@@ -20,6 +20,10 @@
 }
 
 /* H1 - H6 STYLES */
+h1, h2, h3, h4 {
+  text-shadow: 5px 5px 15px var(--tertiary);
+  padding: 10px;
+}
 .primary-text h1 {
   font-size: 3.5vh;
 }
@@ -162,6 +166,31 @@ main {
 .w-100 {
   width: 100%;
   margin: 15px 0;
+}
+
+/* SECTION | ApprovedJob */
+.approved-container {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  width: 90vw;
+  margin: 10px 0;
+  display: flex;
+}
+
+.title-container {
+  width: 25vw;
+  padding: 10px;
+}
+
+.approved-contents {
+  width: 60vw;
+  padding: 10px 20px 10px 10px;
+  border-radius: 15px;
+  border-left: 2px solid var(--tertiary);
+  box-shadow: 10px 0px 25px -20px var(--tertiary) inset;
 }
 
 /* DIV | ApprovedList */
