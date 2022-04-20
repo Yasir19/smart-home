@@ -26,14 +26,14 @@ const ApprovedJob = () =>{
 		);
 	}
     return (
-		<div>
-			<div className="flex-row mb-3">
+		<section className="approved-container">
+			<div className="flex-row mb-3 title-container">
 				<h2 className="bg-dark text-secondary p-3 display-inline-block">
 					Viewing Approved Job
 				</h2>
 			</div>
 			<div className="flex-row justify-space-between mb-3">
-				<div className="col-12 mb-3 col-lg mb-3">
+				<div className="col-12 mb-3 col-lg mb-3 approved-contents">
 					{Auth.contractorLoggedIn() && <ApprovedList projects={user.projects} ></ApprovedList>}
 				</div>
 			</div>
@@ -42,7 +42,7 @@ const ApprovedJob = () =>{
 				</div>
 				</div>
 			
-		</div>
+		</section>
     )
 }
 export default ApprovedJob
