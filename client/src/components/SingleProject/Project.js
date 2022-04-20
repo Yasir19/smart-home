@@ -19,7 +19,7 @@ const Project = () => {
     }
     return(
         <div>
-            <div className='card mb-3'>
+            <div className='card bg-primary' style={{width: "30rem"}}>
                 <p className='card-header'>
                     <span style={{ fontWeight:500}} className="text-light">
                         Project Owner: {project.userName}

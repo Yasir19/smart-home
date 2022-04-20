@@ -13,7 +13,7 @@ const ProjectList = ({ projects, projectDescription }) => {
 			<h3> {projectDescription}</h3>
 			{projects &&
 				projects.map((project) => (
-					<div key={project._id} className="card mb-3">
+					<div key={project._id} className="card mb-3" style={{width: "30rem"}}>
 						<div className="card-body">
 							<Link to={`project/${project._id}`}>
 								<p className="mb-0">Project Owner:{project.userName}</p>
