@@ -25,6 +25,7 @@ const ContactUs = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
+        <p>Fill Out The Form Below To Be Contacted By Our Smart Home Team</p>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" required />
       </div>

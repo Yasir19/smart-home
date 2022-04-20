@@ -10,12 +10,15 @@ const Account = () => {
 	const user = data?.loggedUser || {};
     console.log(user)
     return (
-        <div>
+        <div className="card">
             
             <p>UserName: {user.userName}</p>
             <p>Email: {user.email}</p>
             <p>First Name: {user.firstName}</p>
             <p>Last Name: {user.lastName}</p>
+            <p>Phone Number: {user.phoneNumber}</p>
+            <p>Address: {user.address}</p>
+            <p>Account Type: {user.role}</p>
         </div>
     )
 }
