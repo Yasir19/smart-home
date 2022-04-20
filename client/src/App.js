@@ -20,9 +20,13 @@ import HomeSecurity from "./components/HomeSecurity";
 import YourProject from "./components/YourProject/index";
 import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
-import ApprovedJob from './components/ApprovedJob/index'
+import ApprovedJob from "./components/ApprovedJob/index";
 import ContactUs from "./components/ContactUs";
+<<<<<<< HEAD
 import Account from "./components/Account";
+=======
+import Account from "./components/Account/Account";
+>>>>>>> 5cddb10e206c7190a80bbd12d5ee7b9281acb3f8
 
 const HttpLink = createHttpLink({
 	uri: "/graphql",
@@ -53,8 +57,16 @@ function App() {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={Login} />
-						<Route exact path="/YourProject/:userName?" component={YourProject} />
-						<Route exact path='/ApprovedJob/:userName?' component={ApprovedJob}/>
+						<Route
+							exact
+							path="/YourProject/:userName?"
+							component={YourProject}
+						/>
+						<Route
+							exact
+							path="/ApprovedJob/:userName?"
+							component={ApprovedJob}
+						/>
 						<Route exact path="/signup" component={Signup} />
 						<Route exact path="/Smarter" component={Csignup} />
 						<Route exact path="/project/:id" component={Project} />
@@ -62,9 +74,19 @@ function App() {
 						<Route exact path="/Job" component={Job} />
 						<Route exact path="/ContactUs" component={ContactUs} />
 						<Route exact path="/Account" component={Account} />
-						<Route exact path="/EnergyManagement" component={EnergyManagement} />
-						<Route exact path="/LifeStyleSupport" component={LifeStyleSupport} />
+						<Route
+							exact
+							path="/EnergyManagement"
+							component={EnergyManagement}
+						/>
+						<Route
+							exact
+							path="/LifeStyleSupport"
+							component={LifeStyleSupport}
+						/>
 						<Route exact path="/HomeSecurity" component={HomeSecurity} />
+						<Route exact path="/Account" component={Account} />
+
 						<Route component={NoMatch} />
 					</Switch>
 				</div>

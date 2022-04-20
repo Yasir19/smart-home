@@ -14,16 +14,16 @@ const ProjectList = ({ projects, projectDescription }) => {
 			{projects &&
 				projects.map((project) => (
 					<div key={project._id} className="card mb-3" style={{width: "30rem"}}>
-						<div className="card-body">
+						<div className="">
 							<Link to={`project/${project._id}`}>
-								<p className="mb-0">Project Owner:{project.userName}</p>
-								<p>Project Description:{project.projectDescription}</p>
-								<p className="mb-0">
+								<h3 className="mb-0">Project Owner:{project.userName}</h3>
+								<h4>Project Description:{project.projectDescription}</h4>
+								<h4 className="mb-0">
 									Project Materials:{project.projectMaterials}
-								</p>	
-								<p className="mb-0">
+								</h4>	
+								<h4 className="mb-0">
 									Project initial Price:{project.initPrice}
-								</p>
+								</h4>
 								</Link>
 								<div className="col-12 mb-3">
 									{Auth.contractorLoggedIn() ? <OfferForm projectId={project._id} />
