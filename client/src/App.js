@@ -19,6 +19,7 @@ import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
 import ApprovedJob from './components/ApprovedJob/index'
 import ContactUs from "./components/ContactUs";
+import Account from "./components/Account";
 
 
 const HttpLink = createHttpLink({
@@ -58,6 +59,7 @@ function App() {
 						<Route exact path="/CreateProject" component={CreateProject} />
 						<Route exact path="/Job" component={Job} />
 						<Route exact path="/ContactUs" component={ContactUs} />
+						<Route exact path="/Account" component={Account} />
 						<Route component={NoMatch} />
 					</Switch>
 				</div>

@@ -59,6 +59,8 @@ export const QUERY_USER = gql`
     user(userName: $userName) {
       _id
       userName
+      firstName
+      lastName
       email
       projects {
         _id
