@@ -6,7 +6,7 @@ const ApprovedList = ({ projects, projectDescription }) => {
 		return <h3> No Available Projects Yet </h3>;
 	}
 	return (
-		<div className="apporved-list my-5">
+		<div className="approved-list my-5">
 			<h3> {projectDescription}</h3>
 			{projects &&
 				projects.map((project) => (
