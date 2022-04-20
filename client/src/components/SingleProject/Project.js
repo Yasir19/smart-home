@@ -8,7 +8,6 @@ import OfferList from "../OfferList";
 
 const Project = () => {
 	const { id: projectId } = useParams();
-
 	const { loading, data } = useQuery(QUERY_PROJECT, {
 		variables: { id: projectId },
 	});

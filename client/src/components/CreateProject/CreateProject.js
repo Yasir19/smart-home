@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { ADD_PROJECT } from "../../utils/mutation";
 import { useMutation } from "@apollo/client";
-
+import Auth from "../../utils/auth";
+import { Redirect } from "react-router-dom";
 function CreateProject() {
 	const [projectForm, setProjectForm] = useState({
 		projectDescription: "",
@@ -11,7 +12,6 @@ function CreateProject() {
 	});
 
 	const [addProject, { error }] = useMutation(ADD_PROJECT);
-
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setProjectForm({
@@ -31,7 +31,6 @@ function CreateProject() {
 			console.log(err);
 		}
 	};
-
 	return (
 		<div>
 			<main>
