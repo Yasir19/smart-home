@@ -1,5 +1,5 @@
 import React from "react";
-import ImgSecurity from "../../assets/images/Security/Security.webp";
+import ImgSecurity from "../../assets/images/Security.webp";
 import css from "./mostpopular.css";
 
 const MostPopular = () => {
