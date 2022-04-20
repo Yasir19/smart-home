@@ -7,7 +7,6 @@ import Auth from "../../utils/auth";
 const OfferList = ({ offers, projectId }) => {
 	const [isOffer, setIsOffer] = useState({ contractorName: "", newOffer: "" });
 	const [approveOffer, { error }] = useMutation(APPROVE_OFFER);
-	console.log(offers);
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 

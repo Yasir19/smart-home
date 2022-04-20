@@ -40,6 +40,9 @@ export const QUERY_CUSTOMER = gql`
       firstName
       lastName
       email
+      phoneNumber
+      address
+      role
       projects {
         _id
         userName
