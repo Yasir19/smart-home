@@ -3,8 +3,6 @@ import { ADD_PROJECT } from "../../utils/mutation";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { Redirect } from "react-router-dom";
-
-
 function CreateProject() {
 	const [projectForm, setProjectForm] = useState({
 		projectDescription: "",
@@ -14,7 +12,6 @@ function CreateProject() {
 	});
 
 	const [addProject, { error }] = useMutation(ADD_PROJECT);
-
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setProjectForm({
@@ -34,60 +31,6 @@ function CreateProject() {
 			console.log(err);
 		}
 	};
-
-<<<<<<< HEAD
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-  
-    return (
-        <div>
-            <p className="m-0">
-            </p>
-            <form className="flex-row justify-center justify-space-between-md align-stretch"
-            onSubmit={formSubmit}
-            >
-                <input
-                placeholder="Project Description"
-                value={projectForm.projectDescription}
-                onChange={handleChange}
-                name= "projectDescription"
-                className="form-input col-12 col-md-9"
-                ></input>
-                 <input
-                placeholder="Project Materials"
-                value={projectForm.projectMaterials}
-                onChange={handleChange}
-                name= "projectMaterials"
-                className="form-input col-12 col-md-9"
-                ></input>
-                 <input
-                placeholder="Project Zip Code"
-                value={projectForm.projectZipCode}
-                onChange={handleChange}
-                name= "projectZipCode"
-                className="form-input col-12 col-md-9"
-                ></input>
-                 <input
-                placeholder="Initial Price"
-                value={projectForm.initPrice}
-                onChange={handleChange}
-                name= "initPrice"
-                className="form-input col-12 col-md-9"
-                ></input>
-                <button className="btn col-12 col-md-3" type="submit">
-                Submit
-                </button>
-            </form>
-            {error && <div> please check you offer value </div>}
-        </div>
-        
-        
-    )
-    
-=======
 	return (
 		<div>
 			<main>
@@ -135,7 +78,6 @@ function CreateProject() {
 			</main>
 		</div>
 	);
->>>>>>> 5cddb10e206c7190a80bbd12d5ee7b9281acb3f8
 }
 
 export default CreateProject;

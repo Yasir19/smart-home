@@ -7,41 +7,7 @@ import OfferForm from "../OfferForm";
 import OfferList from "../OfferList";
 
 const Project = () => {
-<<<<<<< HEAD
-    const {id:projectId} = useParams();
-
-    const{loading, data} = useQuery(QUERY_PROJECT,{
-        variables:{id:projectId}
-    });
-    const project = data?.project || {};
-    if(loading) {
-        return<div>Loading....</div>
-    }
-    return(
-        <div>
-            <div className='card bg-primary' style={{width: "20rem"}}>
-                <p className='card-header'>
-                    <span style={{ fontWeight:500}} className="text-light">
-                        Project Owner: {project.userName}
-                    </span>
-                </p>
-                <div className='card-body'>
-                    <p>project Description: {project.projectDescription}</p>
-                    <p>project Materials: {project.projectMaterials}</p>
-                    <p>init Price: {project.initPrice}</p>
-                </div>
-                <div className="flex-row justify-space-between">
-          <div className="col-12 mb-3">
-            {Auth.contractorLoggedIn() ? <OfferForm projectId={project._id}/> :
-            Auth.customerLoggedIn() ? <OfferList offers={project.offers} projectId={project._id} />
-    
-         :null}
-            </div>
-      </div>
-=======
 	const { id: projectId } = useParams();
->>>>>>> 5cddb10e206c7190a80bbd12d5ee7b9281acb3f8
-
 	const { loading, data } = useQuery(QUERY_PROJECT, {
 		variables: { id: projectId },
 	});

@@ -22,11 +22,8 @@ import CreateProject from "./components/CreateProject/CreateProject";
 import Job from "./components/JobBoard/JobBoard";
 import ApprovedJob from "./components/ApprovedJob/index";
 import ContactUs from "./components/ContactUs";
-<<<<<<< HEAD
-import Account from "./components/Account";
-=======
 import Account from "./components/Account/Account";
->>>>>>> 5cddb10e206c7190a80bbd12d5ee7b9281acb3f8
+
 
 const HttpLink = createHttpLink({
 	uri: "/graphql",
