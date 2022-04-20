@@ -27,11 +27,12 @@ function Nav(params) {
 										<Link to="/YourProject">Your Project</Link>
 									</li>
 									<li className="mx-2">
-										<Link to="">Account</Link>
+										<Link to="/Account">Account</Link>
 									</li>
 									<li className="mx-2">
-										<Link to="">Contact Us</Link>
+										<Link to="/ContactUs">Contact Us</Link>
 									</li>
+									
 									<li className="mx-2">
 										<a data-testid="log Out" href="/" onClick={logout}>
 											Log Out
@@ -75,6 +76,7 @@ function Nav(params) {
 									login
 								</a>
 							</li>
+							
 
 							<li className="mx-2">
 								<a data-testid="join" href="/signup">

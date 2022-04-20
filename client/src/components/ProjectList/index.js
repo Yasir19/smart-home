@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Auth from '../../utils/auth'
-import OfferForm from '../OfferForm'
-import OfferList from '../OfferList'
+import Auth from "../../utils/auth";
+import OfferForm from "../OfferForm";
+import OfferList from "../OfferList";
 
 const ProjectList = ({ projects, projectDescription }) => {
 	if (!projects.length) {
