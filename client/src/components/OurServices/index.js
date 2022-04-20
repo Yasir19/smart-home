@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
 	return (
-		<section className="">
+		<section className="" id="our-services">
 			<h2>Our Services</h2>
 			<article className="card-container">
 				<div className="card" style={{ width: "18rem" }}>
