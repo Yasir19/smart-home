@@ -41,21 +41,25 @@ const OfferList = ({ offers, projectId }) => {
                 className="flex-row justify-center justify-space-between-md align-stretch"
                 onSubmit={handleFormSubmit}
               >
-                <p
+                <div
                   className="card-body"
                   name="contractorName"
                   value={offer.ContractorName}
                   onClick={handleChange}
                 >
                   Offer By:{offer.ContractorName}
-                </p>
-                <button
+                </div>
+                <div
                   name="newOffer"
                   value={offer.newOffer}
                   onClick={handleChange}
+                  
                 >
                   The Offer Value:{offer.newOffer}{" "}
-                </button>
+                </div>
+                <button className="btn d-block w-100" type="click">
+								Submit
+							</button>
               </form>
             </div>
             <div className="flex-row justify-space-between mb-3">
