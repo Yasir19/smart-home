@@ -4,6 +4,11 @@ const { ApolloServer } = require('apollo-server-express')
 const path = require('path');
 const {authMiddleware}= require('./utils/auth')
 
+// require dependencies for contact form submission
+const router = express.Router();
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+
 //import typeDefs and resolver
 const { typeDefs, resolvers } = require ('./schemas')
 const db = require('./config/connection')
@@ -27,10 +32,49 @@ const startServer =  async () => {
   }
    // initialize the Apollo server
    startServer();
-
+   
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+app.use("/", router);
 
+// Replace the user and password with your account info to receive form submission to your email
+const contactEmail = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: "smarthomeutbootcamp@gmail.com",
+    pass: "algorithmunlock123",
+  },
+});
+
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
+
+router.post("/contact", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message; 
+  const mail = {
+    from: name,
+    to: "smarthomeutbootcamp@gmail.com",
+    subject: "Contact Form Submission",
+    html: `<p>Name: ${name}</p>
+           <p>Email: ${email}</p>
+           <p>Message: ${message}</p>`,
+  };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json({ status: "ERROR" });
+    } else {
+      res.json({ status: "Message Sent" });
+    }
+  });
+});
 // serve up static assets
 // if(process.env.NODE_ENV === 'production'){
 //   app.use(express.static(path.join(__dirname, '../client/build')))
