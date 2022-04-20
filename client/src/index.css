@@ -11,8 +11,9 @@
   margin: 0;
   padding: 0;
   font-variant: small-caps;
-  font-weight: lighter;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 400;
   line-height: 1.5;
 
   /* visual aid below (delete later) */
@@ -40,13 +41,20 @@ h4 {
   font-size: 2.5vh;
 }
 
+p {
+  text-align: left;
+}
+
+h1 p {
+  text-align: center;
+}
+
 /* A STYLES */
 a {
   text-decoration: none;
   color: var(--tertiary);
   padding: 5px 15px;
   transition-duration: 1s;
-
 }
 
 a:hover {
@@ -65,6 +73,7 @@ a:hover {
   box-shadow: 2px 2px 15px var(--secondary);
   font-weight: bold;
   transition-duration: 1s;
+  width: 80%;
 }
 
 .btn:hover {
@@ -73,13 +82,17 @@ a:hover {
   box-shadow: 2px 2px 15px var(--tertiary);
 }
 
+
 .my-5 {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
 /* IMG STYLES */
-#our-services img, #info-page img  {
+#our-services img, #info-page img, .img, #most-popular img {
+  box-shadow: 5px 5px 20px var(--tertiary);
+}
+#our-services img, #info-page img, .img {
   border-radius: 10px;
 }
 
@@ -88,6 +101,9 @@ a:hover {
   width: 100%;
 }
 
+#most-popular img {
+  border-radius: 50%;
+}
 
 /* BODY STYLES */
 body {
@@ -119,7 +135,9 @@ header nav ul {
 
 header nav ul li {
   width: 25vw;
+  font-size: 95%;
 }
+
 
 /* MAIN | HomePage Home.js */
 main {
@@ -170,8 +188,11 @@ main {
   box-shadow: 5px 5px 20px var(--tertiary);
 }
 
+.card img, .img {
+  margin: 15px 0;
+}
 .card-title {
-  font-size: 125%;
+  /* font-size: 125%; */
   margin-bottom: 10px;
 }
 
@@ -242,8 +263,9 @@ main {
   padding: 15px;
   border: none;
   color: var(--primary);
-  margin: 0 5px;
+  margin: 10px 5px;
   transition-duration: 1s;
+  width: 80%;
 }
 
 .form-input:focus {

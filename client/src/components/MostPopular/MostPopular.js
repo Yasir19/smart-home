@@ -9,13 +9,11 @@ import ImgLights from "../../assets/images/lights.webp";
 import Imggd from "../../assets/images/gd.jpeg";
 import Imgphone from "../../assets/images/phone.jpeg";
 
-import css from "./mostpopular.css";
-
 const MostPopular = () => {
   return (
     <section className="my-5">
-      <h2>Most Popular Projects</h2>
-      <article className="card-container most-popular">
+      <h2>Popular Smart Installations</h2>
+      <article className="card-container" id="most-popular">
         <>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img
@@ -24,7 +22,7 @@ const MostPopular = () => {
               width={180}
               height={180}
             ></img>
-            <h4 className="card-title">Wifi Optimizer</h4>
+            <h4 className="card-title">Wifi Optimization</h4>
           </Link>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img
@@ -33,7 +31,7 @@ const MostPopular = () => {
               width={180}
               height={180}
             ></img>{" "}
-            <h4 className="card-title">Smart Light Installiton</h4>
+            <h4 className="card-title">Smart Home Lighting</h4>
           </Link>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img
@@ -42,7 +40,7 @@ const MostPopular = () => {
               width={180}
               height={180}
             ></img>
-            <h4 className="card-title">Mobile Cell-Phone Repair</h4>
+            <h4 className="card-title">Smart Phone Repair</h4>
           </Link>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img
@@ -51,7 +49,7 @@ const MostPopular = () => {
               width={180}
               height={180}
             ></img>
-            <h4 className="card-title">Home Thiater and Tv</h4>
+            <h4 className="card-title">Home Theater</h4>
           </Link>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img
@@ -60,7 +58,7 @@ const MostPopular = () => {
               width={180}
               height={180}
             ></img>
-            <h4 className="card-title">Smart Door Lock </h4>
+            <h4 className="card-title">Smart Garage </h4>
           </Link>
           <Link to="/CreateProject" className="card" style={{ width: "18rem" }}>
             <img

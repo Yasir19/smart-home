@@ -20,13 +20,13 @@ const Landingpage = () => {
 						<Typical
 							loop={Infinity}
 							steps={[
-								"Improve your Home Energy Managment",
+								"Enhance Your Lifestyle",
 								1000,
-								"LifeStyle Support",
+								"Improve Home Energy Managment",
+								1000,
+								"Optimize Your Wifi",
 								1000,
 								"Secure Your Home",
-								1000,
-								"Optimize your Home Wifi signal",
 								1000,
 							]}
 						/>
