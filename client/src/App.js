@@ -24,7 +24,6 @@ import ApprovedJob from './components/ApprovedJob/index'
 import ContactUs from "./components/ContactUs";
 import Account from "./components/Account";
 
-
 const HttpLink = createHttpLink({
 	uri: "/graphql",
 });
@@ -59,7 +58,7 @@ function App() {
 						<Route exact path="/signup" component={Signup} />
 						<Route exact path="/Smarter" component={Csignup} />
 						<Route exact path="/project/:id" component={Project} />
-						<Route exact path="/CreateProject" component={CreateProject} />
+					    <Route exact path="/CreateProject" component={CreateProject} />
 						<Route exact path="/Job" component={Job} />
 						<Route exact path="/ContactUs" component={ContactUs} />
 						<Route exact path="/Account" component={Account} />

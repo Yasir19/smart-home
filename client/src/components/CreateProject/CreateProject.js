@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { ADD_PROJECT } from "../../utils/mutation";
 import { useMutation } from "@apollo/client";
+import Auth from "../../utils/auth";
+import { Redirect } from "react-router-dom";
+
 
 function CreateProject () {
     const [projectForm, setProjectForm] = useState({
@@ -33,6 +36,7 @@ function CreateProject () {
         }
     }
 
+  
     return (
         <div>
             <p className="m-0">
