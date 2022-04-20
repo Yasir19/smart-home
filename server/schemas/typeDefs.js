@@ -43,7 +43,7 @@ type Mutation {
     addUser(userName:String!, firstName:String!, lastName:String!, email:String!, password:String!, phoneNumber:String!, address:String!,role:String,typeOfServices:String,serviceZipcode:String ): Auth
     addOffer(projectId: ID!,newOffer:String! ):Projects
     addProject(projectDescription:String!, projectMaterials:String!, projectZipCode:String!, initPrice:String!):Projects
-    approveOffer(projectId: ID!,newOffer:String!): Projects
+    approveOffer(projectId: ID!,newOffer:String!,contractorName:String!): Projects
     
 }
 type Auth {
