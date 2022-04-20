@@ -78,6 +78,17 @@ a:hover {
   margin-bottom: 3rem;
 }
 
+/* IMG STYLES */
+#our-services img, #info-page img  {
+  border-radius: 10px;
+}
+
+#info-page img {
+  opacity: 65%;
+  width: 100%;
+}
+
+
 /* BODY STYLES */
 body {
   display: flex;
@@ -116,19 +127,24 @@ main {
 }
 
 /* SECTION | landingPage index.js */
+#welcome {
+  border-bottom: 1px solid var(--tertiary);
+}
+
 .primary-text {
+  padding: 10px;
   font-size: 4vh;
 }
 
 .highligted-text {
   /* font-weight: bolder; */
+  text-shadow: 2px 2px 15px var(--tertiary);
   transition-duration: 2s;
 }
 
 .highligted-text:hover {
   font-size: 4.5vh;
   color: var(--secondary);
-  text-shadow: 2px 2px 15px var(--tertiary);
 }
 
 /* SECTION | OurServices & MostPopular */
@@ -219,7 +235,6 @@ main {
 .card-header {
   font-size: 1.75vw;
 }
-
 
 /* INPUT STYLES */
 .form-input {

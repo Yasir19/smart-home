@@ -8,7 +8,7 @@ const Landingpage = () => {
 	return (
 		<section className="my-5">
 			<div className="profile-details-name">
-				<span className="primary-text">
+				<span className="primary-text" id="welcome">
 					{" "}
 					Welcome to <span className="highligted-text">Smart Home </span>
 				</span>
@@ -34,7 +34,7 @@ const Landingpage = () => {
 				</span>
 			</div>
 			<div>
-				<InfoPage></InfoPage>
+				{/* <InfoPage></InfoPage> */}
 			</div>
 			<div>
 				<Services></Services>
