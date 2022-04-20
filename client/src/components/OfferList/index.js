@@ -5,7 +5,6 @@ import ApprovedList from "../ApprovedList";
 import Auth from "../../utils/auth";
 
 const OfferList = ({ offers, projectId }) => {
-<<<<<<< HEAD
   const [isOffer, setIsOffer] = useState({ contractorName: "", newOffer: "" });
   const [approveOffer, { error }] = useMutation(APPROVE_OFFER);
   const handleChange = (e) => {
@@ -15,12 +14,6 @@ const OfferList = ({ offers, projectId }) => {
       [name]: value,
     });
   };
-=======
-	const [isOffer, setIsOffer] = useState({ contractorName: "", newOffer: "" });
-	const [approveOffer, { error }] = useMutation(APPROVE_OFFER);
-	const handleChange = (e) => {
-		const { name, value } = e.target;
->>>>>>> 5cddb10e206c7190a80bbd12d5ee7b9281acb3f8
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
