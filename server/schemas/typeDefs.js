@@ -21,7 +21,7 @@ type Projects {
     projectDescription:String
     projectMaterials:String
     projectZipCode:String
-    userName:String
+    userName:Stringorigin main 
     initPrice:String
     offers:[Offer]
 }
