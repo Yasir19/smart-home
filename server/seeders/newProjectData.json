@@ -1,0 +1,32 @@
+[
+    {
+        "projectDescription":"home theater",
+        "projectZipCode": 48034,
+        "projectMaterials":"wire",
+        "userName":"Alberto Harrison",
+        "initPrice": "350"
+
+    },
+    {
+        "projectDescription":"WiFi Optimizer",
+        "projectZipCode": 70801,
+        "projectMaterials":"NONE",        
+        "userName":"Sean L. Jackson",
+        "initPrice": "120"
+
+    },
+    {
+        "projectDescription":"smart light installation",
+        "projectZipCode": 56187,
+        "projectMaterials":"NONE",
+        "userName":"Troy M. Rucker",
+        "initPrice": "180"
+    },
+    {
+        "projectDescription":"WiFi Optimizer",
+        "projectZipCode": 89119,
+        "projectMaterials":"Wifi tester",
+        "userName":"Wanda C. Bogue",
+        "initPrice": "120"
+    }
+]

@@ -1,0 +1,356 @@
+/* COLOR PALETTE */
+:root {
+  --primary: rgb(201, 120, 15);
+  --secondary: rgb(50, 90, 150);
+  --tertiary: rgb(235, 225, 225);
+  --fourth: rgba(190, 160, 160, 0.75);
+}
+
+/* UNIVERSAL CONSTANTS */
+* {
+  margin: 0;
+  padding: 0;
+  font-variant: small-caps;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  /* visual aid below (delete later) */
+  /* border: 1px solid red; */
+}
+
+/* H1 - H6 STYLES */
+h1,
+h2,
+h3,
+h4 {
+  text-shadow: 5px 5px 15px var(--tertiary);
+  padding: 10px;
+}
+
+.primary-text h1 {
+  font-size: 3.5vh;
+}
+
+h2 {
+  font-size: 3vh;
+  ;
+}
+
+h3 {
+  font-size: 2.75vh;
+}
+
+h4 {
+  font-size: 2.5vh;
+}
+
+p {
+  text-align: left;
+}
+
+h1 p {
+  text-align: center;
+}
+
+/* A STYLES */
+a {
+  text-decoration: none;
+  color: var(--tertiary);
+  padding: 5px 15px;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: var(--secondary);
+  border-right: 1px solid var(--tertiary);
+  border-left: 1px solid var(--tertiary);
+}
+
+/* BUTTON STYLES */
+.btn {
+  color: var(--secondary);
+  border-radius: 15px;
+  background-color: var(--fourth);
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px var(--secondary);
+  font-weight: bold;
+  transition-duration: 1s;
+  width: 80%;
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  box-shadow: 2px 2px 15px var(--tertiary);
+}
+
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* IMG STYLES */
+#our-services img,
+#info-page img,
+.img,
+#most-popular img {
+  box-shadow: 5px 5px 20px var(--tertiary);
+}
+
+#our-services img,
+#info-page img,
+.img {
+  border-radius: 10px;
+}
+
+#info-page img {
+  opacity: 65%;
+  width: 100%;
+}
+
+#most-popular img {
+  border-radius: 50%;
+}
+
+/* BODY STYLES */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: var(--secondary);
+  align-items: center;
+}
+
+/* HEADER STYLES */
+header,
+main {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  width: 90vw;
+  text-align: center;
+  font-size: 1vw;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5vw;
+}
+
+header nav ul li {
+  width: 25vw;
+  font-size: 95%;
+}
+
+
+/* MAIN | HomePage Home.js */
+main {
+  margin: 10px 0;
+}
+
+/* SECTION | landingPage index.js */
+#welcome {
+  border-bottom: 1px solid var(--tertiary);
+}
+
+.primary-text {
+  padding: 10px;
+  font-size: 4vh;
+}
+
+.highligted-text {
+  /* font-weight: bolder; */
+  text-shadow: 2px 2px 15px var(--tertiary);
+  transition-duration: 2s;
+}
+
+.highligted-text:hover {
+  font-size: 4.5vh;
+  color: var(--secondary);
+}
+
+/* SECTION | OurServices & MostPopular */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.card {
+  width: 25%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: .75;
+  transition: 1s;
+}
+
+.card:hover {
+  opacity: 1;
+  box-shadow: 5px 5px 20px var(--tertiary);
+}
+
+.card img,
+.img {
+  margin: 15px 0;
+}
+
+.card-title {
+  /* font-size: 125%; */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.w-100 {
+  width: 100%;
+  margin: 15px 0;
+}
+
+/* SECTION | ApprovedJob */
+.approved-container {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  width: 90vw;
+  margin: 10px 0;
+  display: flex;
+}
+
+.title-container {
+  width: 25vw;
+  padding: 10px;
+}
+
+.approved-contents {
+  width: 60vw;
+  padding: 10px 20px 10px 10px;
+  border-radius: 15px;
+  border-left: 2px solid var(--tertiary);
+  box-shadow: 10px 0px 25px -20px var(--tertiary) inset;
+}
+
+/* DIV | ApprovedList */
+.approved-list {
+  justify-content: space-around;
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 15px;
+  /* width: 90vw; */
+}
+
+.card-approved-list {
+  width: fit-content;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: .75;
+}
+
+.card-body {
+  width: fit-content;
+}
+
+/* MAIN Clogin.js STYLES */
+.card-header {
+  font-size: 1.75vw;
+}
+
+/* INPUT STYLES */
+.form-input {
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+  color: var(--primary);
+  margin: 10px 5px;
+  transition-duration: 1s;
+  width: 80%;
+}
+
+.form-input:focus {
+  color: var(--tertiary);
+  border: none;
+  font-variant: normal;
+  box-shadow: 2px 2px 15px var(--tertiary);
+  background-color: var(--fourth);
+  outline: none;
+}
+
+.form-input:focus::placeholder {
+  color: var(--tertiary);
+  font-variant: small-caps;
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+  /* HEADER */
+  header h1 {
+    font-size: 3vh;
+  }
+
+  header nav ul {
+    font-size: 2vh;
+  }
+
+  /* MAIN */
+  .profile-details-name {
+    border-left: 1px solid var(--tertiary);
+    border-right: 1px solid var(--tertiary);
+  }
+
+  .primary-text {
+    padding: 5px;
+    font-size: 3.5vh;
+  }
+
+  #welcome {
+    border-bottom: none;
+    font-weight: bolder;
+    /* color: var(--secondary); */
+    text-shadow: 2px 2px 15px var(--tertiary);
+    transition-duration: 2s;
+  }
+
+  .highligted-text:hover {
+    font-size: 4vh;
+  }
+
+  /* OUR SERVICES */
+  #our-services h2,
+  #most-popular h2 {
+    /* border-bottom: 1px solid var(--tertiary); */
+    color: var(--secondary);
+    font-weight: bolder;
+    border-left: 1px solid var(--tertiary);
+    border-right: 1px solid var(--tertiary);
+  }
+
+  #our-services p {
+    font-size: 2vh;
+  }
+
+  /* INPUT STYLES */
+  #log-in .card, #sign-up .card, #c-signup .card {
+    width: 80%;
+  }
+
+  #log-in h4, #sign-up h4, #c-signup h4 {
+    font-size: 3vh;
+  }
+}
