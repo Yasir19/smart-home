@@ -4,6 +4,8 @@ import Auth from "../../utils/auth";
 import { useParams, Redirect } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_CUSTOMER } from "../../utils/queries";
+
+
 const ApprovedJob = () =>{
     const { userName: userParam } = useParams();
 	const { loading, data } = useQuery(QUERY_CUSTOMER, {
@@ -41,6 +43,7 @@ const ApprovedJob = () =>{
 				<div className="col-12 mb-3 col-lg mb-3">
 				</div>
 				</div>
+				{/* <iframe width="200" height="200" loading="lazy"  src={`https://www.google.com/maps/embed/v1/place?q=${user.projects.projectZipCode}&key=AIzaSyDI3sNUMCRaUbcIHIGYV5sla-XT7k2V9NI`}></iframe> */}
 			
 		</section>
     )

@@ -21,16 +21,21 @@
 }
 
 /* H1 - H6 STYLES */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-shadow: 5px 5px 15px var(--tertiary);
   padding: 10px;
 }
+
 .primary-text h1 {
   font-size: 3.5vh;
 }
 
 h2 {
-  font-size: 3vh;;
+  font-size: 3vh;
+  ;
 }
 
 h3 {
@@ -89,10 +94,16 @@ a:hover {
 }
 
 /* IMG STYLES */
-#our-services img, #info-page img, .img, #most-popular img {
+#our-services img,
+#info-page img,
+.img,
+#most-popular img {
   box-shadow: 5px 5px 20px var(--tertiary);
 }
-#our-services img, #info-page img, .img {
+
+#our-services img,
+#info-page img,
+.img {
   border-radius: 10px;
 }
 
@@ -115,7 +126,8 @@ body {
 }
 
 /* HEADER STYLES */
-header, main {
+header,
+main {
   justify-content: space-around;
   padding: 10px 25px;
   background-color: var(--primary);
@@ -188,9 +200,11 @@ main {
   box-shadow: 5px 5px 20px var(--tertiary);
 }
 
-.card img, .img {
+.card img,
+.img {
   margin: 15px 0;
 }
+
 .card-title {
   /* font-size: 125%; */
   margin-bottom: 10px;
@@ -280,4 +294,63 @@ main {
 .form-input:focus::placeholder {
   color: var(--tertiary);
   font-variant: small-caps;
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+  /* HEADER */
+  header h1 {
+    font-size: 3vh;
+  }
+
+  header nav ul {
+    font-size: 2vh;
+  }
+
+  /* MAIN */
+  .profile-details-name {
+    border-left: 1px solid var(--tertiary);
+    border-right: 1px solid var(--tertiary);
+  }
+
+  .primary-text {
+    padding: 5px;
+    font-size: 3.5vh;
+  }
+
+  #welcome {
+    border-bottom: none;
+    font-weight: bolder;
+    /* color: var(--secondary); */
+    text-shadow: 2px 2px 15px var(--tertiary);
+    transition-duration: 2s;
+  }
+
+  .highligted-text:hover {
+    font-size: 4vh;
+  }
+
+  /* OUR SERVICES */
+  #our-services h2,
+  #most-popular h2 {
+    /* border-bottom: 1px solid var(--tertiary); */
+    color: var(--secondary);
+    font-weight: bolder;
+    border-left: 1px solid var(--tertiary);
+    border-right: 1px solid var(--tertiary);
+  }
+
+  #our-services p {
+    font-size: 2vh;
+  }
+
+  /* INPUT STYLES */
+  #log-in .card, #sign-up .card, #c-signup .card {
+    width: 80%;
+  }
+
+  #log-in h4, #sign-up h4, #c-signup h4 {
+    font-size: 3vh;
+  }
 }

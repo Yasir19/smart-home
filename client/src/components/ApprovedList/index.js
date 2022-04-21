@@ -27,7 +27,7 @@ const ApprovedList = ({phone, address,projects, projectDescription }) => {
 								<p href="tel:" className="mb-0">
 									Contact Number: {phone}
 								</p>
-							
+								<iframe width="200" height="200" loading="lazy"  src={`https://www.google.com/maps/embed/v1/place?q=${project.projectZipCode}&key=AIzaSyDI3sNUMCRaUbcIHIGYV5sla-XT7k2V9NI`}></iframe>
 						</div>
 					</div>
 				))}
