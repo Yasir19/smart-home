@@ -20,7 +20,7 @@ const ApprovedList = ({ projects, projectDescription }) => {
 								<p className="mb-0">
 									Project initial Price:{project.initPrice}
 								</p>
-							
+								<iframe width="200" height="200" loading="lazy"  src={`https://www.google.com/maps/embed/v1/place?q=${project.projectZipCode}&key=AIzaSyDI3sNUMCRaUbcIHIGYV5sla-XT7k2V9NI`}></iframe>
 						</div>
 					</div>
 				))}
