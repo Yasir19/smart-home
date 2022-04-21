@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ApprovedList = ({ projects, projectDescription }) => {
+const ApprovedList = ({phone, address,projects, projectDescription }) => {
 	if (!projects.length) {
 		return <h3> No Available Projects Yet </h3>;
 	}
@@ -16,9 +16,16 @@ const ApprovedList = ({ projects, projectDescription }) => {
 								<p>Project Description:{project.projectDescription}</p>
 								<p className="mb-0">
 									Project Materials:{project.projectMaterials}
-								</p>	
+								</p>
 								<p className="mb-0">
 									Project initial Price:{project.initPrice}
+								</p>	
+								<p className="mb-0">
+									Customer Address:{address}
+								</p>
+							
+								<p href="tel:" className="mb-0">
+									Contact Number: {phone}
 								</p>
 							
 						</div>

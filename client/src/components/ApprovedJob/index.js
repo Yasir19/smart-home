@@ -34,7 +34,7 @@ const ApprovedJob = () =>{
 			</div>
 			<div className="flex-row justify-space-between mb-3">
 				<div className="col-12 mb-3 col-lg mb-3 approved-contents">
-					{Auth.contractorLoggedIn() && <ApprovedList projects={user.projects} ></ApprovedList>}
+					{Auth.contractorLoggedIn() && <ApprovedList phone={user.phoneNumber} address ={user.address}projects={user.projects} ></ApprovedList>}
 				</div>
 			</div>
 			<div className="flex-row justify-space-between mb-3">
